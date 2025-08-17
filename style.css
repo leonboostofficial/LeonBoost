@@ -1,0 +1,2049 @@
+/* Genel Stil Ayarları */
+:root {
+    --primary-color: #FFD700;
+    /* Parlaq Qızılı Sarı *
+    /* Parlaq Qırmızı-Narıncı */
+    --dark-bg: #1a1a1a;
+    --darker-bg: #121212;
+    --text-color: #e0e0e0;
+    --light-gray: #ccc;
+    --white: #fff;
+    /* --red-highlight: #e74c3c; BU XƏTTİ TAMAMİLƏ SİLİN VƏ YA ŞƏRHƏ ÇEVİRİN */
+}
+
+body {
+  background-image: url(https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--darker-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ 
+
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Düymə mətninin bir sətirdə qalmasını təmin edir */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    border: none;
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    /*background-color: var(--secondary-color);*/
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    transform: translateY(-2px);
+}
+
+.btn-login,
+.btn-signup {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-login:hover {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+}
+
+.btn-signup {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    border: none;
+}
+
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+h6 {
+    font-size: 1.0em;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Header Stil */
+/* HEADER SECTION */
+.main-header {
+    background-color: var(--dark-bg);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Əlavə: Sol tərəfdən 20px boşluq verərək bütün başlıq kontentini sola sürüşdürür */
+    padding-left: 10px; 
+    padding-right: 20px;
+}
+/* LOQO VƏ MƏTN QƏSƏBƏSİNİN YERLƏŞMƏSİ */
+.logo {
+    display: flex;
+    /* Flexbox istifadə edərək loqo şəkli və mətn qrupunu yan-yana qoyur */
+    align-items: center;
+    /* Şaquli olaraq mərkəzə hizala */
+    gap: 10px;
+    /* Loqo şəkli ilə mətn qrupu arasında boşluq */
+}
+
+.logo img {
+    height: 50px;
+    /* Loqonuzun ölçüsü, ehtiyac varsa tənzimləyin */
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+}
+
+/* LOQONUN YANINDAKİ MƏTN QƏSƏBƏSİ (LEONBOOST + Liginizi Zafere Taşıyın) */
+.logo-text-group {
+    display: flex;
+    /* Bu konteyneri də flexbox edirik */
+    flex-direction: column;
+    /* ƏSAS: Mətnləri bir-birinin altına yığır */
+    align-items: flex-start;
+    /* Mətnləri soldan hizala */
+    line-height: 1.2;
+    /* Sətirlər arası boşluğu tənzimləyin */
+}
+
+/* LEONBOOST MƏTNİ ÜÇÜN STILLƏR */
+.logo-name {
+    color: var(--primary-color);
+    /* Loqo mətninin rəngi */
+    font-family: 'Poppins', sans-serif;
+    /* Şrift */
+    font-size: 1.8em;
+    /* "LEONBOOST" yazısının ölçüsü (şəkillərdəki böyük ölçüyə görə artırıldı) */
+    font-weight: 700;
+    /* Daha qalın */
+    white-space: nowrap;
+    /* Mətnin bir sətirdə qalmasını təmin edir */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.9);
+    /* Neon parıltı */
+    margin: 0;
+    /* Standart boşluqları sıfırla */
+}
+
+/* LİGİNİZİ ZAFERE TAŞIYIN! MƏTNİ ÜÇÜN STILLƏR */
+.tagline {
+    color: var(--light-gray);
+    /* Boz rəng */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    /* Mətnin ölçüsü */
+    font-weight: 400;
+    /* Daha yüngül şrift qalınlığı */
+    white-space: nowrap;
+    margin: 0;
+    /* Standart boşluqları sıfırla */
+    margin-top: 2px;
+    /* LEONBOOST ilə arasında kiçik boşluq */
+}
+
+
+/* Mobil uyğunluq üçün (responsive design) - 768px-dən kiçik ekranlarda mətnləri gizlədirik */
+@media (max-width: 768px) {
+    .logo-text-group {
+        display: none;
+        /* Kiçik ekranlarda LEONBOOST və tagline mətnlərini gizlədirik */
+    }
+
+    .logo img {
+        height: 40px;
+        /* Loqo şəklinin ölçüsü kiçik ekranlarda */
+    }
+
+    /* Navigasiya və user controls üçün dəyişikliklər */
+    .main-header .main-nav,
+    .main-header .user-controls {
+        display: none;
+        /* Desktopda gizli olan bu elementləri mobil ölçüdə gizlət */
+    }
+
+    .main-header .hamburger-menu {
+        display: block;
+        /* Hamburger ikonunu göster */
+    }
+
+    /* Hamburger menyusu açıldığında CSS (əvvəlki cavablarımdan) */
+    .main-nav.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 80px;
+        /* Header yüksekliği kadar aşağıda */
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-nav.active ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .user-controls.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 280px;
+        /* Menüden sonra */
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-color);
+        align-items: center;
+    }
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    color: var(--light-gray);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+.main-nav ul li a i {
+    margin-right: 8px;
+    color: var(--accent-color);
+    /* Oyun ikonları üçün bənövşəyi */
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 1px;
+    margin-left: 10px;
+}
+
+.lang-switcher img {
+    width: px;
+    height: 28px;
+    cursor: pointer;
+    /* border: 2px solid transparent; */
+    border-radius: 50%;
+    /* transition: border-color 0.3s ease; */
+}
+
+
+.hamburger-menu {
+    display: none;
+    /* Mobil için varsayılan olarak gizli */
+    font-size: 1.8em;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+
+.hero-content {
+    z-index: 2;
+    /* Mətnin loqo overlay-dən öndə olması üçün */
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    color: var(--light-gray);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discount-banner {
+    background-color: rgba(var(--dark-bg), 0.7);
+    border: 2px solid var(--accent-color);
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: inline-flex;
+    /* İçerideki elementleri yan yana getirir */
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+    /* Neon parıltı */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.discount-banner span {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.countdown {
+    display: flex;
+    gap: 15px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.countdown-item {
+    background-color: var(--darker-bg);
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.hero-logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* Böyük, lakin mütənasib ölçü */
+    max-width: 1000px;
+    height: auto;
+    opacity: 0.1;
+    /* Yarı-şəffaf */
+    z-index: 1;
+    pointer-events: none;
+    /* Üzərinə klikləməyi əngəlləyir */
+}
+
+.hero-logo-overlay img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%) brightness(50%);
+    /* Fonla uyğunlaşdırmaq üçün */
+}
+
+/* Features Section Stil */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item {
+    background-color: var(--darker-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 140, 0, 0.3);
+}
+
+.feature-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.4);
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: var(--light-gray);
+}
+
+/* Services Overview Section Stil */
+.services-overview-section {
+    padding: 80px 0;
+    background-color: var(--darker-bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(138, 43, 226, 0.3);
+    /* Accent rəngdə parıltı */
+}
+
+.service-card i {
+    font-size: 3.5em;
+    color: var(--accent-color);
+    /* Oyun xidmətləri üçün bənövşəyi */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+}
+
+.service-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.service-card p {
+    color: var(--light-gray);
+    margin-bottom: 25px;
+}
+
+/* Stats Section Stil */
+.stats-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    background-color: var(--darker-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+}
+
+.stat-item .stat-number {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+}
+
+.stat-item p {
+    font-size: 1.1em;
+    color: var(--light-gray);
+}
+
+/* Testimonials Section Stil */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--darker-bg);
+    position: relative;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow-x: hidden;
+    /* JavaScript ile kaydırma kontrolü */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 30px;
+    /* Her bir yorum arasında boşluk */
+    padding-bottom: 20px;
+    /* Kaydırma çubuğu için yer */
+}
+
+.testimonial-item {
+    flex: 0 0 45%;
+    /* Sadece 2 item görünecek şekilde ayarlandı, mobil için 100% */
+    max-width: 45%;
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-item .stars {
+    color: gold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.testimonial-item .client-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+/* FAQ Section (Short) Stil */
+.faq-section-short {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.faq-item {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #2a2a2a;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+    color: var(--light-gray);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+    /* Plus işaretini x'e çevirir */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Cevabın içeriğine göre ayarlanmalı */
+    padding: 0 20px 20px;
+}
+
+.faq-section-short .btn {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+}
+
+/* Footer Stil */
+.main-footer {
+    background-color: var(--dark-bg);
+    padding: 60px 0 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    height: 60px;
+    /* Footer loqosu ölçüsü */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 5px rgba(255, 140, 0, 0.5));
+}
+
+.footer-about p,
+.footer-links ul li a,
+.footer-contact p,
+.footer-contact a {
+    color: var(--light-gray);
+    font-size: 0.95em;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-payments h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: var(--light-gray);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.payment-icons img {
+    height: 35px;
+    margin-right: 15px;
+    filter: grayscale(100%);
+    /* Başlangıçta gri tonlu */
+    transition: filter 0.3s ease;
+}
+
+.payment-icons img:hover {
+    filter: grayscale(0%);
+    /* Üzerine gelince renkli olur */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    color: var(--light-gray);
+    font-size: 0.85em;
+    margin-top: 20px;
+}
+
+.disclaimer-text {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    /* Başlangıçta gizli */
+    visibility: hidden;
+    z-index: 999;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-5px);
+}
+
+/* Responsive Dizayn (Mobil Uyğunluq) */
+@media (max-width: 1024px) {
+    .main-nav ul {
+        gap: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 3em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .testimonial-item {
+        flex: 0 0 60%;
+        /* Tabletlərdə 2 item daha böyük */
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-header .main-nav,
+    .main-header .user-controls {
+        display: none;
+        /* Gizle */
+    }
+
+    .main-header .hamburger-menu {
+        display: block;
+        /* Hamburger ikonunu göster */
+    }
+
+    .header-content {
+        justify-content: space-between;
+    }
+
+    /* Mobil menü açıldığında */
+    .main-nav.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 80px;
+        /* Header yüksekliği kadar aşağıda */
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-nav.active ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .user-controls.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: 280px;
+        /* Menüden sonra */
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid var(--border-color);
+        align-items: center;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+        padding: 50px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .discount-banner {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .discount-banner span {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .countdown {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .features-grid,
+    .services-grid,
+    .stats-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item,
+    .service-card,
+    .stat-item {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        flex: 0 0 90%;
+        /* Mobilde 1 item görünecek */
+        max-width: 90%;
+        margin: 0 auto;
+        /* Ortalamak için */
+    }
+
+    .carousel-nav {
+        top: unset;
+        bottom: 10px;
+        transform: none;
+        padding: 10px 8px;
+        font-size: 1.2em;
+    }
+
+    .carousel-nav.prev {
+        left: 15%;
+    }
+
+    .carousel-nav.next {
+        right: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .stat-item .stat-number {
+        font-size: 2.8em;
+    }
+}
+
+.btn {
+
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.7), 0 0 15px rgba(255, 69, 0, 0.5);
+    /* Primary ve Secondary renklerden gölge */
+}
+
+
+h1,
+h2 {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 69, 0, 0.6);
+}
+
+/* --- LoL Boost Səhifəsi üçün Xüsusi Stillər --- */
+
+/* Oyunun Baş Banneri (League of Legends Boost) */
+/* Oyunun Baş Banneri (League of Legends Boost) */
+/* Oyunun Baş Banneri (League of Legends Boost) */
+.game-hero-banner {
+    /* Qaranlıq overlay + Yeni aslan loqosu + Ümumi fon şəkli */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /* Qaranlıq overlay */
+        url('images/dark_lion_bg.png') no-repeat center center / 80% auto,
+        /* YENİ ASLAN LOQOSU VƏ ÖLÇÜSÜ */
+        url('images/lol_bg_banner.jpg') no-repeat center center/cover;
+    /* Ümumi fon şəkli */
+
+    padding: 100px 0;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    /* Əmin olmaq üçün əlavə etdim ki, loqo görsənsin */
+    display: flex;
+    /* Mətnləri ortalamaq üçün */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Əgər "dark_lion_bg.png" faylı yoxdursa, aşağıdakı filtrləri də tətbiq edə bilərsiniz
+   mövcud "leonboost_logo.png" faylını tündləşdirmək üçün.
+   Amma ən yaxşısı arxa fon üçün xüsusi olaraq hazırlanmış solğun bir loqo faylı istifadə etməkdir.
+*/
+/*
+.game-hero-banner {
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('images/leonboost_logo.png') no-repeat center center / 80% auto;
+    background-blend-mode: multiply; // Bu, fonla qarışdırır
+    filter: grayscale(100%) brightness(50%); // Şəkli tündləşdirir və boz rəngə çevirir
+    // ... digər stillər ...
+}
+*/
+
+/* Digər stillər dəyişməz qalır */
+.game-hero-banner h1 {
+    font-size: 4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.game-hero-banner p {
+    font-size: 1.5em;
+    color: var(--light-gray);
+}
+
+.game-hero-banner h1 {
+    font-size: 4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.game-hero-banner p {
+    font-size: 1.5em;
+    color: var(--light-gray);
+}
+
+/* Boost Xidmətləri Qridi (Kartlar) */
+.boost-services-grid {
+    padding: 80px 0;
+    background-color: var(--dark-bg-secondary);
+    text-align: center;
+}
+
+/* Service Cards Container */
+.service-cards-container {
+    display: grid;
+    /* Ekran ölçüsünə görə avtomatik düzülməni təmin edir */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; /* Kartlar arasında boşluğu artırır */
+    justify-content: center;
+    align-items: stretch; /* Bütün kartların hündürlüyünü bərabərləşdirir */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Service Card */
+.service-card {
+    background-color: var(--dark-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px; /* Daxili boşluğu artırır */
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border-color: var(--primary-color);
+}
+
+.service-card .card-image {
+    width: 120px; /* Şəklin ölçüsünü bir az artırır */
+    height: 120px;
+    margin-bottom: 15px; /* Şəkillə mətn arasında boşluq qoyur */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card .card-title {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    line-height: 1.3;
+    margin-top: auto; /* Mətnin aşağıda qalmasını təmin edir */
+}
+
+/* Mobil uyğunluq üçün */
+@media (max-width: 768px) {
+    .service-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+    }
+    .service-card {
+        padding: 15px;
+    }
+    .service-card .card-image {
+        width: 100px;
+        height: 100px;
+    }
+    .service-card .card-title {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        /* Mobil ekranlarda kartları daha da kiçildək */
+        gap: 15px;
+    }
+
+    .service-card .card-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .service-card .card-title {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Çox kiçik ekranlarda 2 sütun */
+        gap: 10px;
+    }
+
+    .service-card {
+        padding: 10px;
+    }
+
+    .service-card .card-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-card .card-title {
+        font-size: 0.8em;
+    }
+}
+
+/* Sifariş Konfiquratoru (Əvvəlki cavabımızdakı stillər eynilə) */
+.lol-boost-configurator-section {
+    padding: 60px 0;
+    background-color: var(--dark-bg);
+    /* Ümumi fon */
+}
+
+.boost-configurator {
+    background-color: var(--darker-bg);
+    /* Bir az daha tünd fon */
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    /* Ortalamak için */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+
+.boost-configurator h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--primary-color);
+    /* Qızılı rəng başlığı */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    font-size: 2.5em;
+}
+
+.config-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.config-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.config-item label {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    /* Narıncı etiketlər */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.config-item select,
+.config-item input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--dark-bg);
+    /* Tünd fon */
+    color: var(--text-color);
+    font-size: 1em;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFD700%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-24.3-1.6L146.4%20170.6%2031.7%2067.8a17.6%2017.6%200%200%200-24.3%201.6L.6%2081.7c-2.4%202.4-2.4%206.1%200%208.5l135%20135c4.8%204.8%2012.5%204.8%2017.3%200l135-135c2.4-2.4%202.4-6.1%200-8.5l-12.1-12.1z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.config-item select:focus,
+.config-item input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.config-item.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.config-item.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: var(--dark-bg);
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.config-item.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.7);
+}
+
+.config-item.checkbox-group input[type="checkbox"]:checked::after {
+    content: '\2713';
+    font-size: 1.2em;
+    color: var(--dark-bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.config-item.checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.price-display {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.8em;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.price-display span {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.order-btn {
+    display: block;
+    margin: 30px auto 0;
+    width: fit-content;
+    padding: 15px 40px;
+    font-size: 1.2em;
+}
+
+/* Faydalar Bölməsi */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+    text-align: center;
+}
+
+.benefits-section h2 {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background-color: var(--darker-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.benefit-item i {
+    font-size: 3.5em;
+    color: var(--secondary-color);
+    /* İkon rəngi */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+}
+
+.benefit-item h3 {
+    font-size: 1.6em;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    font-size: 1em;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+/* Sipariş Verdim Şimdi Ne Yapmalıyım? Bölməsi */
+.how-it-works-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg-secondary);
+    text-align: center;
+}
+
+.how-it-works-section h2 {
+    font-size: 2.8em;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-item {
+    background-color: var(--darker-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.step-item .step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.step-item .step-icon i {
+    font-size: 2.5em;
+    color: var(--darker-bg);
+    /* İkon rəngi */
+}
+
+.step-item h3 {
+    font-size: 1.6em;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.step-item p {
+    font-size: 0.95em;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+/* --- Responsive üçün əlavələr (mövcud media query-lərinizə əlavə edin) --- */
+@media (max-width: 768px) {
+    .game-hero-banner {
+        padding: 70px 0;
+    }
+
+    .game-hero-banner h1 {
+        font-size: 3em;
+    }
+
+    .game-hero-banner p {
+        font-size: 1.2em;
+    }
+
+    .boost-services-grid,
+    .benefits-section,
+    .how-it-works-section {
+        padding: 50px 0;
+    }
+
+    .service-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+
+    .service-card .card-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary-color);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-card .card-image img {
+        /* Bu hissənin mövcud olduğundan əmin olun */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .service-card .card-title {
+        font-size: 1.2em;
+        /* Ölçünü kiçiltdik. Əvvəl 1.4em idi. */
+        color: var(--primary-color);
+        /* Rəngi dəyişdik. Əvvəl secondary-color idi. */
+        font-weight: 700;
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        /* Qızılı rəngə uyğun kölgə */
+        padding: 0 5px;
+        /* Kənarlardan bir qədər boşluq verək ki, uzun adlar sıxılmasın */
+        line-height: 1.2;
+        /* Sətir hündürlüyünü tənzimləyək */
+    }
+
+    /* Əlavə olaraq, responsive üçün də kiçiltməni yoxlayaq */
+    @media (max-width: 768px) {
+        .service-card .card-title {
+            font-size: 1.1em;
+            /* Mobil görünüşdə bir az daha kiçik */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .service-card .card-title {
+            font-size: 0.95em;
+            /* Çox kiçik ekranlarda daha da kiçik */
+        }
+    }
+
+    .benefits-section h2,
+    .how-it-works-section h2 {
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+
+    .benefits-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+        /* Mobil ekranlarda tək sütun */
+        gap: 20px;
+    }
+
+    .benefit-item i {
+        font-size: 3em;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.4em;
+    }
+
+    .step-item .step-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+
+    .step-item .step-icon i {
+        font-size: 2em;
+    }
+
+    .step-item h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-hero-banner h1 {
+        font-size: 2.2em;
+    }
+
+    .game-hero-banner p {
+        font-size: 1em;
+    }
+
+    .boost-services-grid,
+    .benefits-section,
+    .how-it-works-section {
+        padding: 30px 0;
+    }
+
+    .service-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 15px;
+    }
+
+    .service-card .card-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-card .card-title {
+        font-size: 1em;
+    }
+
+    .benefits-section h2,
+    .how-it-works-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+}
+
+/* Sifariş Konfiquratoru etiketləri */
+.config-item label {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    /* secondary-color yerinə primary-color */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Faydalar bölməsindəki ikonlar */
+.benefit-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    /* secondary-color yerinə primary-color */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    /* Qızılı parıltı */
+}
+
+/* "Sipariş Verdim Şimdi Ne Yapmalıyım?" başlığı */
+.how-it-works-section h2 {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    /* secondary-color yerinə primary-color */
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    /* Qızılı parıltı */
+}
+
+/* Checkbox üçün */
+.config-item.checkbox-group input[type="checkbox"] {
+    /* ... digər stillər ... */
+    border: 2px solid var(--primary-color);
+    /* secondary-color yerinə primary-color */
+    /* ... digər stillər ... */
+}
+
+.config-item.checkbox-group input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    /* secondary-color yerinə primary-color */
+    border-color: var(--secondary-color);
+    /* primary-color yerinə secondary-color, fərqli vurğu üçün */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+    /* Qızılı parıltı */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.game-hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        /* Qaranlıq overlay */
+        url(images/dark_lion_bg.png) no-repeat center center / 80% auto,
+        /* YENİ ASLAN LOQOSU VƏ ÖLÇÜSÜ */
+        url(images/lol_bg_banner.jpg) no-repeat center center / cover;
+    padding: 100px 0;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.global-background-lion-overlay {
+    position: fixed;
+    /* Sayfayı kaydırdığınızda sabit kalmasını sağlar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* Resmi ortalamak için flexbox kullanırız */
+    justify-content: center;
+    /* Yatayda ortalar */
+    align-items: center;
+    /* Dikeyde ortalar */
+    overflow: hidden;
+    /* Taşmaları gizler */
+    z-index: -1;
+    /* Diğer tüm içeriklerin arkasında kalmasını sağlar */
+}
+
+.global-background-lion-overlay img {
+    width: 80vw;
+    /* Görünüm genişliğinin %80'ini kaplasın */
+    height: auto;
+    opacity: 0.08;
+    /* Aslanın şeffaflık derecesini ayarla (0.05 - 0.15 arası iyi olabilir) */
+    /* Resmin tam olarak merkeze oturması ve opaklığı ayarı için bu değerlerle oynayabilirsin */
+}
+
+.global-background-lion-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+    /* Digər bütün məzmunun arxasında qalmasını təmin edir */
+}
+
+.global-background-lion-overlay img {
+    width: 80vw;
+    /* Ekran genişliyinin %80-i qədər */
+    height: auto;
+    opacity: 0.08;
+    /* Şəffaflıq dəyəri. Bu dəyərlə oynayaraq aslanın nə qədər görünəcəyini tənzimləyə bilərsən. */
+}
+
+/* Lig İkonları Container'ı */
+.league-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+    /* İkonlar arası boşluk */
+}
+
+.rank-icon {
+    width: 100px;
+    /* İkonların boyutu */
+    height: 100px;
+    object-fit: contain;
+    /* Resmin içeriğe sığmasını sağlar */
+    transition: transform 0.3s ease;
+    /* Hover efekti için */
+}
+
+.rank-icon:hover {
+    transform: scale(1.05);
+}
+
+.arrow-icon {
+    font-size: 2.5em;
+    /* Ok ikonunun boyutu */
+    color: #FFD700;
+    /* Neon sarısı */
+}
+
+/* responsive ayarları gerekirse eklenir */
+@media (max-width: 768px) {
+    .rank-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .arrow-icon {
+        font-size: 2em;
+    }
+}
+
+/* elo-boost-form için önceki stilleri bu ile değiştirin */
+.elo-boost-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* İki bərabər sütun */
+    gap: 30px;
+    /* Sütunlar arasında boşluq */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Yeni eklenmesi gereken form-group-column stilleri */
+.form-group-column {
+    background-color: #2a2a2a;
+    /* Konteynerlərin fon rəngi */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Daxili kölgə */
+    display: flex;
+    /* İçindəki elementləri flex ilə düzəldək */
+    flex-direction: column;
+    /* Şaquli istiqamətdə düzəldək */
+    gap: 15px;
+    /* Form qrupları arasında boşluq */
+}
+
+.form-group-column h3 {
+    color: #FFD700;
+    /* Başlıq rəngi qızılı */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    /* Aşağda xətt */
+    padding-bottom: 10px;
+}
+
+/* Responsivlik üçün @media sorgusunun içindəki dəyişiklik */
+@media (max-width: 768px) {
+    .elo-boost-form {
+        grid-template-columns: 1fr;
+        /* Kiçik ekranlarda tək sütun olsun */
+        gap: 20px;
+        /* Konteynerlər arasında boşluq */
+    }
+
+    .form-group-column {
+        padding: 15px;
+        /* Kiçik ekranlarda paddingi azaldaq */
+        gap: 10px;
+    }
+}
+
+/* Modal (Açılan pəncərə) üçün CSS */
+.modal {
+    display: none;
+    /* İlkin vəziyyətdə gizlət */
+    position: fixed;
+    /* Brauzer pəncərəsində sabitlənmiş vəziyyət */
+    z-index: 1000;
+    /* Digər elementlərdən üstündə olsun */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Əgər məzmun böyük olsa, scroll əlavə et */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Yarım-şəffaf qara fon */
+}
+
+.modal-content {
+    background-color: #2c2f33;
+    margin: 10% auto;
+    /* Yuxarıdan və ortadan məsafə */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    /* Maksimum genişlik */
+    border-radius: 10px;
+    position: relative;
+    color: #fff;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    background-color: #36393f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.modal-content .btn-primary {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Hakkımızda səhifəsinin dizaynı */
+.about-page-content {
+    padding: 80px 0;
+    color: #fff;
+}
+
+.about-section,
+.mission-section,
+.team-section {
+    margin-bottom: 40px;
+}
+
+.about-section h1,
+.mission-section h2,
+.team-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffc107;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.about-section p,
+.mission-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.member-card {
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ffc107;
+}
+
+.member-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffc107;
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Kiçik ekranlar üçün dizayn */
+@media (max-width: 768px) {
+    .about-page-content {
+        padding: 40px 15px;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.hero-section {
+  position: relative;
+  background: url('images/aslan.png') no-repeat center center;
+  background-size: contain; /* və ya cover, istəyə bağlı */
+  background-attachment: fixed; /* səhifə sürüşərkən aslan sabit qalır */
+  padding: 60px 20px; /* məzmunu arxa fondan ayrı tutmaq üçün */
+  color: white; /* mətnin görünməsi üçün */
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* arxa fonda qaralma - mətn daha oxunaqlı olur */
+  z-index: 0;
+}
+
+#hero-subtitle {
+  position: relative;
+  z-index: 2;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7); /* Mətnə azca kölgə verərək oxunuşu artırır */
+}
+
+.hero-section ::before {
+  background: url('images/aslan.png') no-repeat center center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Ümumi şəffaflıq */
+}
+
+
+
+
+
+
