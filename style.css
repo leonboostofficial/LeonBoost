@@ -1425,6 +1425,7 @@ h2 {
     color: var(--secondary-color);
     margin-bottom: 50px;
     text-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    background-color: black;
 }
 
 .steps-grid {
