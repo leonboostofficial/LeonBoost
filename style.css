@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url(https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png);
+  background-image: url(https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1031,9 +1031,9 @@ h2 {
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         /* Qaranlıq overlay */
-        url('https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png') no-repeat center center / 60% auto,
+        url('images/dark_lion_bg.png') no-repeat center center / 80% auto,
         /* YENİ ASLAN LOQOSU VƏ ÖLÇÜSÜ */
-        url('https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png') no-repeat center center/cover;
+        url('images/lol_bg_banner.jpg') no-repeat center center/cover;
     /* Ümumi fon şəkli */
 
     padding: 100px 0;
@@ -1041,6 +1041,7 @@ h2 {
     text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     min-height: 500px;
+    /* Əmin olmaq üçün əlavə etdim ki, loqo görsənsin */
     display: flex;
     /* Mətnləri ortalamaq üçün */
     align-items: center;
@@ -1425,7 +1426,6 @@ h2 {
     color: var(--secondary-color);
     margin-bottom: 50px;
     text-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
-    background-color: black;
 }
 
 .steps-grid {
