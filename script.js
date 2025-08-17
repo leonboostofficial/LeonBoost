@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Boost Hizmetleri - LEONBOOST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="global-background-lion-overlay">
+        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Arka Plan Aslan">
+    </div>
+
+    <header class="main-header">
+    <div class="container header-content">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+            </a>
+            <div class="logo-text-group">
+                <span class="logo-name">LEONBOOST</span>
+                <span class="tagline" data-tr="Liginizi Zafere Taşıyın!" data-en="Take Your League to Victory!">
+                    Take Your League to Victory!
+                </span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" id="nav-anasayfa" data-tr="Ana Sayfa" data-en="Home">Home</a></li>
+                <li><a href="valorant-boost.html" id="nav-valorantboost" class="active" data-tr="Valorant Boost" data-en="Valorant Boost">Valorant Boost</a></li>
+                <li><a href="hakkımızda.html" id="nav-hakkimizda" data-tr="Hakkımızda" data-en="About Us">About Us</a></li>
+                <li><a href="iletişim.html" id="nav-iletisim" data-tr="İletişim" data-en="Contact">Contact</a></li>
+            </ul>
+            <div class="header-buttons">
+                <button id="login-btn" data-tr="Giriş Yap" data-en="Login">Login</button>
+                <button id="signup-btn" data-tr="Kayıt Ol" data-en="Sign Up">Sign Up</button>
+            </div>
+        </nav>
+    </div>
+<div class="lang-switcher">
+    <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/tr_flag.png" alt="Türkçe"
+        data-lang="tr" class="active-lang">
+    <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/en_flag.png" alt="English"
+        data-lang="en">
+</div>
+</div>
+<div class="hamburger-menu">
+    <i class="fas fa-bars"></i>
+</div>
+</div>
+</header>
+
+<main>
+    <section class="game-hero-banner">
+        <div class="container">
+            <h1 data-tr="Valorant Boost" data-en="Valorant Boost">Valorant Boost</h1>
+        </div>
+    </section>
+
+    <section class="boost-services-grid">
+        <div class="container">
+            <div class="service-cards-container">
+                <a href="elo-boost-valorant.html" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/valoelo1.png"
+                            alt="Elo Boost">
+                    </div>
+                    <h3 id="service1-title" data-tr="Elo Boost" data-en="Elo Boost">Elo Boost</h3>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/valorantduo.png"
+                            alt="Duo Boost">
+                    </div>
+                    <h3 id="service2-title" data-tr="Duo Boost" data-en="Duo Boost">Duo Boost</h3>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/valorantyerle%C5%9Ftirme1.png"
+                            alt="Yerleştirme Maçları">
+                    </div>
+                    <h3 class="card-title" data-tr="Yerleştirme Maçları" data-en="Placement Matches">Placement Matches</h3>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/astra_portrait.png" alt="Radyant Boost">
+                    </div>
+                    <h3 class="card-title" data-tr="Radyant Boost" data-en="Radiant Boost">Radiant Boost</h3>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/dese92l-ccd95f7d-9fe0-4723-b46f-76b463d8c402.png" alt="Koçluk">
+                    </div>
+                    <h3 class="card-title" data-tr="Koçluk" data-en="Coaching">Coaching</h3>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/vcvalo.png" alt="Win Boost">
+                    </div>
+                    <h3 class="card-title" data-tr="Win Boost" data-en="Win Boost">Win Boost</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+<section class="benefits-section">
+    <div class="container">
+        <h2 data-tr="Valorant Boost İşlemlerinin Faydaları Nelerdir?" data-en="What Are the Benefits of Valorant Boost Services?">
+            What Are the Benefits of Valorant Boost Services?
+        </h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="step-icon">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <h3 data-tr="Hızlı Rank Atlayın" data-en="Climb Ranks Quickly">Climb Ranks Quickly</h3>
+                <p data-tr="Daha az zamanda istediğiniz lige ulaşın ve becerilerinizi geliştirin." data-en="Reach your desired rank faster and improve your skills.">
+                    Reach your desired rank faster and improve your skills.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <div class="step-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 data-tr="Güvenli ve Gizli" data-en="Safe and Confidential">Safe and Confidential</h3>
+                <p data-tr="Hesabınızın güvenliği ve gizliliği bizim için en önemli önceliktir." data-en="Your account's security and privacy are our top priority.">
+                    Your account's security and privacy are our top priority.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <div class="step-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 data-tr="Profesyonel Oyuncular" data-en="Professional Players">Professional Players</h3>
+                <p data-tr="Deneyimli ve yüksek rütbeli booster'larımız ile oynayın." data-en="Play with our experienced and high-rank boosters.">
+                    Play with our experienced and high-rank boosters.
+                </p>
+            </div>
+            <div class="benefit-item">
+                <div class="step-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 data-tr="Oyun Bilginizi Artırın" data-en="Improve Your Game Knowledge">Improve Your Game Knowledge</h3>
+                <p data-tr="Booster'larımızdan oyun içi ipuçları ve stratejiler öğrenin." data-en="Learn in-game tips and strategies from our boosters.">
+                    Learn in-game tips and strategies from our boosters.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="how-it-works-section">
+    <div class="container">
+        <h2 data-tr="Sipariş Verdim Şimdi Ne Yapmalıyım ?" data-en="I Ordered, What Should I Do Now?">
+            I Ordered, What Should I Do Now?
+        </h2>
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 data-tr="1. Kullanıcı Paneline Gir" data-en="1. Access User Panel">1. Access User Panel</h3>
+                <p data-tr="Sipariş verdikten sonra ödeme başarılı sayfasından &quot;Kullanıcı Paneli&quot;ni ziyaret et."
+                   data-en="After ordering, visit the &quot;User Panel&quot; from the payment success page.">
+                   After ordering, visit the "User Panel" from the payment success page.
+                </p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <h3 data-tr="2. Bilgilerini Gir" data-en="2. Enter Your Details">2. Enter Your Details</h3>
+                <p data-tr="Siparişini oluşturduktan sonra kullanıcı panelinde siparişin için gerekli bilgileri gir."
+                   data-en="After creating your order, enter the necessary information for your order in the user panel.">
+                   After creating your order, enter the necessary information for your order in the user panel.
+                </p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 data-tr="3. Booster'ınla Mesajlaş" data-en="3. Chat with Your Booster">3. Chat with Your Booster</h3>
+                <p data-tr="Booster atandığında sistemimiz mail adresine otomatik olarak mesaj gönderecektir. Booster ataması yapıldığında kullanıcı panelinizden booster'ınızla mesajlaşabilirsiniz. Boostunuz bittiğinde mail adresinize tamamlandı bildirimi de ayrıca gelecek."
+                   data-en="When a booster is assigned, our system will automatically send a message to your email. Once assigned, you can chat with your booster from your user panel. When your boost is finished, a completion notification will also be sent to your email.">
+                   When a booster is assigned, our system will automatically send a message to your email. Once assigned, you can chat with your booster from your user panel. When your boost is finished, a completion notification will also be sent to your email.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
