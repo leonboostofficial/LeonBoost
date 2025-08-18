@@ -36,12 +36,12 @@ function calculatePrice() {
 
   // Hedef mevcut ranktan düşükse fiyat = 0
   if (desiredValue <= currentValue) {
-    finalPrice.textContent = "0.00 TL";
+    finalPrice.textContent = "0.00 $";
     return 0;
   }
 
-  // Aradaki fark * temel birim fiyat (örnek: 50 TL)
-  const basePricePerStep = 50;
+  // Aradaki fark * temel birim fiyat (örnek: 5 USD)
+  const basePricePerStep = 5;
   const steps = desiredValue - currentValue;
   let price = steps * basePricePerStep;
 
@@ -49,7 +49,7 @@ function calculatePrice() {
   price *= laneMultiplier;
 
   // Fiyatı güncelle
-  finalPrice.textContent = price.toFixed(2) + " TL";
+  finalPrice.textContent = price.toFixed(2) + " $";
   return price;
 }
 
@@ -65,10 +65,5 @@ orderBtn.addEventListener("click", () => {
     alert("Lütfen mevcut ligden daha yüksek bir hedef lig seçin.");
     return;
   }
-  alert("Siparişiniz oluşturuldu. Toplam fiyat: " + price.toFixed(2) + " TL\n(Burada ödeme sistemi bağlanacak)");
+  alert("Siparişiniz oluşturuldu. Toplam fiyat: " + price.toFixed(2) + " $\n(Burada ödeme sistemi bağlanacak)");
 });
-
-
-
-
-
