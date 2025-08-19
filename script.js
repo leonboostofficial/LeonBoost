@@ -148,3 +148,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// server.js
+const express = require('express');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json());
+app.use(session({
+    secret: 'gizli-key', 
+    resave: false,
+    saveUninitialized: true
+}));
+
+// Basit kullanıcı verisi
+const users = [{ username: 'test', password: '1234' }];
+
+// Login endpoint
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+    const user = users.find(u => u.username === username && u.password === password);
+    if (user) {
+        req.session.user = { username };
+        return res.json({ success: true });
+    }
+    res.status(401).json({ success: false, message: 'Hatalı giriş' });
+});
+
+// Boost işlemi endpoint (sadece giriş yapmış kullanıcılar)
+app.post('/boost', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ success: false, message: 'Giriş yapmalısınız!' });
+    }
+    // Boost işlemi burada yapılır
+    res.json({ success: true, message: 'Boost işlemi başarılı!' });
+});
+
+app.listen(3000, () => console.log('Server çalışıyor http://localhost:3000'));
+
