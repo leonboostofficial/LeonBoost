@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEONBOOST - Elo Boost Hesapla</title>
+    <title>LEONBOOST - Calculate Elo Boost</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
@@ -14,7 +14,7 @@
 
 <body>
     <div class="global-background-lion-overlay">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Arka Plan Aslan">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
     </div>
 
     <header class="main-header">
@@ -25,23 +25,23 @@
                 </a>
                 <div class="logo-text-group">
                     <span class="logo-name">LEONBOOST</span>
-                    <span class="tagline">Liginizi Zafere Taşıyın!</span>
+                    <span class="tagline">Take Your League to Victory!</span>
                 </div>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="lol-boost.html" class="active">LoL Boost</a></li>
-                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
-                    <li><a href="iletişim.html">İletişim</a></li>
+                    <li><a href="hakkımızda.html">About Us</a></li>
+                    <li><a href="iletişim.html">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="user-controls">
-                <a href="#" class="btn btn-login">Giriş Yap</a>
-                <a href="#" class="btn btn-signup">Kayıt Ol</a>
+                <a href="#" class="btn btn-login">Login</a>
+                <a href="#" class="btn btn-signup">Sign Up</a>
                 <div class="lang-switcher">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Türkçe" data-lang="tr" class="active-lang">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr" class="active-lang">
                     <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en">
                 </div>
             </div>
@@ -55,102 +55,102 @@
     <main>
         <section class="elo-boost-calculator-section" style="padding-top: 100px;">
             <div class="container">
-                <h2>Elo Boost Hesaplayıcı</h2>
+                <h2>Elo Boost Calculator</h2>
 
                 <div class="league-images-container">
-                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Mevcut Lig" class="rank-icon">
+                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Current League" class="rank-icon">
                     <i class="fas fa-arrow-right arrow-icon"></i>
-                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Hedef Lig" class="rank-icon">
+                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Target League" class="rank-icon">
                 </div>
 
                 <section class="lol-boost-configurator-section">
                     <div class="container">
                         <div class="boost-configurator">
-                            <h2>Siparişinizi Yapılandırın</h2>
+                            <h2>Configure Your Order</h2>
                             <div class="config-grid">
                                 <div class="config-item">
-                                    <label for="current-rank">Mevcut Lig</label>
+                                    <label for="current-rank">Current League</label>
                                     <select id="current-rank" name="current-rank">
-                                        <option value="iron3">Demir 3</option>
-                                        <option value="iron2">Demir 2</option>
-                                        <option value="iron1">Demir 1</option>
-                                        <option value="bronze4">Bronz 4</option>
-                                        <option value="bronze3">Bronz 3</option>
-                                        <option value="bronze2">Bronz 2</option>
-                                        <option value="bronze1">Bronz 1</option>
-                                        <option value="silver4">Gümüş 4</option>
-                                        <option value="silver3">Gümüş 3</option>
-                                        <option value="silver2">Gümüş 2</option>
-                                        <option value="silver1">Gümüş 1</option>
-                                        <option value="gold4">Altın 4</option>
-                                        <option value="gold3">Altın 3</option>
-                                        <option value="gold2">Altın 2</option>
-                                        <option value="gold1">Altın 1</option>
-                                        <option value="platinum4">Platin 4</option>
-                                        <option value="platinum3">Platin 3</option>
-                                        <option value="platinum2">Platin 2</option>
-                                        <option value="platinum1">Platin 1</option>
-                                        <option value="emerald4">Zümrüt 4</option>
-                                        <option value="emerald3">Zümrüt 3</option>
-                                        <option value="emerald2">Zümrüt 2</option>
-                                        <option value="emerald1">Zümrüt 1</option>
-                                        <option value="diamond4">Elmas 4</option>
-                                        <option value="diamond3">Elmas 3</option>
-                                        <option value="diamond2">Elmas 2</option>
-                                        <option value="diamond1">Elmas 1</option>
-                                        <option value="master">Ustalık</option>
+                                        <option value="iron3">Iron 3</option>
+                                        <option value="iron2">Iron 2</option>
+                                        <option value="iron1">Iron 1</option>
+                                        <option value="bronze4">Bronze 4</option>
+                                        <option value="bronze3">Bronze 3</option>
+                                        <option value="bronze2">Bronze 2</option>
+                                        <option value="bronze1">Bronze 1</option>
+                                        <option value="silver4">Silver 4</option>
+                                        <option value="silver3">Silver 3</option>
+                                        <option value="silver2">Silver 2</option>
+                                        <option value="silver1">Silver 1</option>
+                                        <option value="gold4">Gold 4</option>
+                                        <option value="gold3">Gold 3</option>
+                                        <option value="gold2">Gold 2</option>
+                                        <option value="gold1">Gold 1</option>
+                                        <option value="platinum4">Platinum 4</option>
+                                        <option value="platinum3">Platinum 3</option>
+                                        <option value="platinum2">Platinum 2</option>
+                                        <option value="platinum1">Platinum 1</option>
+                                        <option value="emerald4">Emerald 4</option>
+                                        <option value="emerald3">Emerald 3</option>
+                                        <option value="emerald2">Emerald 2</option>
+                                        <option value="emerald1">Emerald 1</option>
+                                        <option value="diamond4">Diamond 4</option>
+                                        <option value="diamond3">Diamond 3</option>
+                                        <option value="diamond2">Diamond 2</option>
+                                        <option value="diamond1">Diamond 1</option>
+                                        <option value="master">Master</option>
                                     </select>
                                 </div>
 
                                 <div class="config-item">
-                                    <label for="desired-rank">Hedef Lig</label>
+                                    <label for="desired-rank">Target League</label>
                                     <select id="desired-rank" name="desired-rank">
-                                        <option value="iron3">Demir 3</option>
-                                        <option value="iron2">Demir 2</option>
-                                        <option value="iron1">Demir 1</option>
-                                        <option value="bronze4">Bronz 4</option>
-                                        <option value="bronze3">Bronz 3</option>
-                                        <option value="bronze2">Bronz 2</option>
-                                        <option value="bronze1">Bronz 1</option>
-                                        <option value="silver4">Gümüş 4</option>
-                                        <option value="silver3">Gümüş 3</option>
-                                        <option value="silver2">Gümüş 2</option>
-                                        <option value="silver1">Gümüş 1</option>
-                                        <option value="gold4">Altın 4</option>
-                                        <option value="gold3">Altın 3</option>
-                                        <option value="gold2">Altın 2</option>
-                                        <option value="gold1">Altın 1</option>
-                                        <option value="platinum4">Platin 4</option>
-                                        <option value="platinum3">Platin 3</option>
-                                        <option value="platinum2">Platin 2</option>
-                                        <option value="platinum1">Platin 1</option>
-                                        <option value="emerald4">Zümrüt 4</option>
-                                        <option value="emerald3">Zümrüt 3</option>
-                                        <option value="emerald2">Zümrüt 2</option>
-                                        <option value="emerald1">Zümrüt 1</option>
-                                        <option value="diamond4">Elmas 4</option>
-                                        <option value="diamond3">Elmas 3</option>
-                                        <option value="diamond2">Elmas 2</option>
-                                        <option value="diamond1">Elmas 1</option>
-                                        <option value="master">Ustalık</option>
+                                        <option value="iron3">Iron 3</option>
+                                        <option value="iron2">Iron 2</option>
+                                        <option value="iron1">Iron 1</option>
+                                        <option value="bronze4">Bronze 4</option>
+                                        <option value="bronze3">Bronze 3</option>
+                                        <option value="bronze2">Bronze 2</option>
+                                        <option value="bronze1">Bronze 1</option>
+                                        <option value="silver4">Silver 4</option>
+                                        <option value="silver3">Silver 3</option>
+                                        <option value="silver2">Silver 2</option>
+                                        <option value="silver1">Silver 1</option>
+                                        <option value="gold4">Gold 4</option>
+                                        <option value="gold3">Gold 3</option>
+                                        <option value="gold2">Gold 2</option>
+                                        <option value="gold1">Gold 1</option>
+                                        <option value="platinum4">Platinum 4</option>
+                                        <option value="platinum3">Platinum 3</option>
+                                        <option value="platinum2">Platinum 2</option>
+                                        <option value="platinum1">Platinum 1</option>
+                                        <option value="emerald4">Emerald 4</option>
+                                        <option value="emerald3">Emerald 3</option>
+                                        <option value="emerald2">Emerald 2</option>
+                                        <option value="emerald1">Emerald 1</option>
+                                        <option value="diamond4">Diamond 4</option>
+                                        <option value="diamond3">Diamond 3</option>
+                                        <option value="diamond2">Diamond 2</option>
+                                        <option value="diamond1">Diamond 1</option>
+                                        <option value="master">Master</option>
                                     </select>
                                 </div>
 
                                 <div class="config-item">
-                                    <label for="lane-select">Mevcut Koridor</label>
+                                    <label for="lane-select">Current Lane</label>
                                     <select id="lane-select" name="lane-select">
-                                        <option value="any">Fark Etmez</option>
-                                        <option value="top">Üst Koridor (+25%)</option>
-                                        <option value="jungle">Orman (+25%)</option>
-                                        <option value="mid">Orta Koridor (+25%)</option>
+                                        <option value="any">Any</option>
+                                        <option value="top">Top Lane (+25%)</option>
+                                        <option value="jungle">Jungle (+25%)</option>
+                                        <option value="mid">Mid Lane (+25%)</option>
                                         <option value="adc">ADC (+35%)</option>
-                                        <option value="support">Destek (+35%)</option>
-                                        <option value="champ-select">Özel Şampiyon Seçimi (+40%)</option>
+                                        <option value="support">Support (+35%)</option>
+                                        <option value="champ-select">Custom Champion Selection (+40%)</option>
                                     </select>
                                 </div>
 
                                 <div class="config-item">
-                                    <label for="current-lp">Mevcut Puan</label>
+                                    <label for="current-lp">Current Points</label>
                                     <select id="current-lp" name="current-lp">
                                         <option value="0-19">0-19</option>
                                         <option value="20-39">20-39</option>
@@ -161,28 +161,27 @@
                                 </div>
 
                                 <div class="config-item">
-                                    <label for="queue-type">Dereceli Türü</label>
+                                    <label for="queue-type">Queue Type</label>
                                     <select id="queue-type" name="queue-type">
-                                        <option value="solo">Tekli-Çiftli Dereceli</option>
-                                        <option value="duo">Esnek Dereceli</option>
+                                        <option value="solo">Solo/Duo Ranked</option>
+                                        <option value="duo">Flex Ranked</option>
                                     </select>
                                 </div>
 
                                 <div class="config-item">
-                                    <label for="server">Sunucu</label>
+                                    <label for="server">Server</label>
                                     <select id="server" name="server">
-                                        <option value="tr">Türkiye (TR)</option>
-                                        <option value="euw">Batı Avrupa (EUW)</option>
-                                        <option value="eune">Doğu Avrupa (EUNE)</option>
-                                        <option value="ru">Rusya(RU)</option>
+                                        <option value="tr">Turkey (TR)</option>
+                                        <option value="euw">Western Europe (EUW)</option>
+                                        <option value="eune">Eastern Europe (EUNE)</option>
+                                        <option value="ru">Russia (RU)</option>
                                     </select>
                                 </div>
-
-                                </div>
-                            <div class="price-display">
-                                <p>Yaklaşık Fiyat: <span id="final-price">0.00 TL</span></p>
                             </div>
-                            <button class="btn btn-primary order-btn">Sipariş Ver</button>
+                            <div class="price-display">
+                                <p>Estimated Price: <span id="final-price">0.00 TL</span></p>
+                            </div>
+                            <button class="btn btn-primary order-btn">Place Order</button>
                         </div>
                     </div>
                 </section>
@@ -194,26 +193,24 @@
         <div class="container footer-grid">
             <div class="footer-about">
                 <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
-                <p id="footer-about-text">LEONBOOST, LoL oyuncularına profesyonel ve güvenilir boost hizmetleri
-                    sunar.
-                    Hedefinizdeki lige bizimle ulaşın!</p>
+                <p id="footer-about-text">LEONBOOST provides professional and reliable boost services for LoL players.
+                    Reach your target league with us!</p>
             </div>
             <div class="footer-links">
-                <h3 id="footer-links-title">Hızlı Linkler</h3>
+                <h3 id="footer-links-title">Quick Links</h3>
                 <ul>
-                    <li><a href="#" id="footer-link-services">Hizmetler</a></li>
-                    <li><a href="#" id="footer-link-contact">İletişim</a></li>
-                    <li><a href="#" id="footer-link-terms">Şartlar & Koşullar</a></li>
-                    <li><a href="#" id="footer-link-privacy">Gizlilik Politikası</a></li>
+                    <li><a href="#" id="footer-link-services">Services</a></li>
+                    <li><a href="#" id="footer-link-contact">Contact</a></li>
+                    <li><a href="#" id="footer-link-terms">Terms & Conditions</a></li>
+                    <li><a href="#" id="footer-link-privacy">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h3 id="footer-contact-title">Bize Ulaşın</h3>
+                <h3 id="footer-contact-title">Get in Touch</h3>
                 <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
-                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Discord
-                        Sunucumuz</a>
+                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Our Discord Server</a>
                 </p>
-               <div class="social-icons">
+                <div class="social-icons">
                     <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
