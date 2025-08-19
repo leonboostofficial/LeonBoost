@@ -67,3 +67,84 @@ orderBtn.addEventListener("click", () => {
   }
   alert("Siparişiniz oluşturuldu. Toplam fiyat: " + price.toFixed(2) + " $\n(Burada ödeme sistemi bağlanacak)");
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const loginBtn = document.getElementById('btn-giris');
+    const signupBtn = document.getElementById('btn-kayitol');
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+    const closeBtns = document.querySelectorAll('.modal .close-btn');
+
+    // Giriş butonuna tıklama olayını dinle
+    if (loginBtn) {
+        loginBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            loginModal.style.display = 'flex';
+        });
+    }
+
+    // Kayıt ol butonuna tıklama olayını dinle
+    if (signupBtn) {
+        signupBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            signupModal.style.display = 'flex';
+        });
+    }
+
+    // Tüm kapatma butonlarına tıklama olayını dinle
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Butonun ait olduğu modal pencereyi bulup gizle
+            btn.closest('.modal').style.display = 'none';
+        });
+    });
+
+    // Modal dışına tıklandığında kapat
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+        if (event.target === signupModal) {
+            signupModal.style.display = 'none';
+        }
+    });
+
+    // Formların submit olaylarını dinle (Şimdilik sadece konsola log atar)
+    const loginForm = loginModal.querySelector('form');
+    const signupForm = signupModal.querySelector('form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const email = loginModal.querySelector('#login-email').value;
+            const password = loginModal.querySelector('#login-password').value;
+            console.log('Login Form Verileri:', { email, password });
+
+            // Burada API çağrısını yapacaksın
+            // const response = await fetch('/api/login', { ... });
+            // console.log(response);
+
+            alert('Giriş işlemi yapıldı! (Konsola bakınız)');
+            loginModal.style.display = 'none';
+        });
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = signupModal.querySelector('#signup-username').value;
+            const email = signupModal.querySelector('#signup-email').value;
+            const password = signupModal.querySelector('#signup-password').value;
+            console.log('Sign Up Form Verileri:', { username, email, password });
+
+            // Burada API çağrısını yapacaksın
+            // const response = await fetch('/api/signup', { ... });
+            // console.log(response);
+
+            alert('Kayıt işlemi yapıldı! (Konsola bakınız)');
+            signupModal.style.display = 'none';
+        });
+    }
+});
