@@ -2043,6 +2043,99 @@ img {
 }
 
 
+/* Modal pencerenin genel stili */
+.modal {
+  display: none; /* Varsayılan olarak gizle */
+  position: fixed;
+  z-index: 1000; /* Diğer elementlerin üzerinde görünmesini sağlar */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal içeriği */
+.modal-content {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.modal-content h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.modal-content .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.modal-content label {
+  display: block;
+  color: #b3b3b3;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  background-color: #2b2b2b;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.modal-content .btn-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Mavi renge ayarladım, istersen değiştirebilirsin */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Kapatma butonu */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+
 
 
 
