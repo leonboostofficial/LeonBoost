@@ -1763,7 +1763,7 @@ img {
 .rank-icon {
     width: 200px;
     /* İkonların boyutu */
-    height: 200px;
+    height: 250px;
     object-fit: contain;
     /* Resmin içeriğe sığmasını sağlar */
     transition: transform 0.3s ease;
