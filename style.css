@@ -1761,9 +1761,9 @@ img {
 }
 
 .rank-icon {
-    width: 100px;
+    width: 200px;
     /* İkonların boyutu */
-    height: 100px;
+    height: 200px;
     object-fit: contain;
     /* Resmin içeriğe sığmasını sağlar */
     transition: transform 0.3s ease;
