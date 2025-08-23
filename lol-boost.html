@@ -27,15 +27,17 @@
                 </a>
                 <div class="logo-text-group">
                     <span class="logo-name">LEONBOOST</span>
-                    <span class="tagline">Take Your League to Victory!</span>
+                  <span class="tagline" data-en="Take Your League to Victory!" data-tr="Liginizi Zafere Taşıyın!">
+  Take Your League to Victory!
+</span>
                 </div>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" id="nav-home">Home</a></li>
-                    <li><a href="lol-boost.html" id="nav-lolboost" class="active">LoL Boost</a></li>
-                    <li><a href="hakkımızda.html" id="nav-about">About Us</a></li>
-                    <li><a href="iletişim.html" id="nav-contact">Contact</a></li>
+                    <li><a href="index.html" id="nav-home" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+<li><a href="lol-boost.html" id="nav-lolboost" data-en="LoL Boost" data-tr="LoL Boost">LoL Boost</a></li>
+<li><a href="hakkımızda.html" id="nav-about" data-en="About Us" data-tr="Hakkımızda">About Us</a></li>
+<li><a href="iletişim.html" id="nav-contact" data-en="Contact" data-tr="İletişim">Contact</a></li>
                 </ul>
             </nav>
             <div class="user-controls">
@@ -270,6 +272,33 @@
             </form>
         </div>
     </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const langButtons = document.querySelectorAll(".lang-switcher img");
+
+    function changeLanguage(lang) {
+        document.querySelectorAll("[data-tr]").forEach(el => {
+            el.innerText = el.getAttribute(`data-${lang}`);
+        });
+
+        langButtons.forEach(btn => btn.classList.remove("active-lang"));
+        document.querySelector(`.lang-switcher img[data-lang='${lang}']`)
+            .classList.add("active-lang");
+
+        localStorage.setItem("selectedLang", lang);
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            changeLanguage(lang);
+        });
+    });
+
+    const savedLang = localStorage.getItem("selectedLang") || "en";
+    changeLanguage(savedLang);
+});
+</script>
 
 </body>
 </html>
