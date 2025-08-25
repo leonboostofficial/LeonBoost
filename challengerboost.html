@@ -96,15 +96,18 @@
                                     </select>
                                 </div>
 
-                                <!-- LP seçimi əlavə edildi -->
+                                <!-- LP seçimi -->
                                 <div class="config-item">
                                     <label for="lp-input">Current LP (0 - 200)</label>
                                     <input type="number" id="lp-input" name="lp-input" min="0" max="200" value="0">
                                 </div>
                             </div>
+
                             <div class="price-display">
                                 <p>Estimated Price: <span id="final-price">0.00 $</span></p>
+                                <p>Total Level: <span id="total-level">40</span></p>
                             </div>
+
                             <button class="btn btn-primary order-btn">Place Order</button>
                         </div>
                     </div>
@@ -162,7 +165,6 @@
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        // Challenger LP limiti
         const MAX_CHALLENGER_LP = 200;
         const lpInput = document.getElementById("lp-input");
 
@@ -177,9 +179,13 @@
 
             // hər 10 LP üçün +5$
             let lpPrice = (lp / 10) * 5;
-
             let finalPrice = basePrice + lpPrice;
+
+            // ümumi level (40 + seçilən LP)
+            let totalLevel = 40 + lp;
+
             document.getElementById("final-price").textContent = finalPrice.toFixed(2) + " $";
+            document.getElementById("total-level").textContent = totalLevel;
         }
 
         lpInput.addEventListener("input", calculatePrice);
