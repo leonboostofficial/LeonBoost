@@ -1,286 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEONBOOST - Calculate Elo Boost</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEONBOOST - Professional LoL Boosting Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="global-background-lion-overlay">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
+  <div class="global-background-lion-overlay">
+    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
+  </div>
+
+  <header class="main-header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+        </a>
+        <div class="logo-text-group">
+          <span class="logo-name">LEONBOOST</span>
+          <span class="tagline" data-tr="Ligini Zafere Taşı!" data-en="Take Your League to Victory!">Take Your League to Victory!</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" id="nav-home" data-tr="Ana Sayfa" data-en="Home">Home</a></li>
+          <li><a href="lol-boost.html" id="nav-lolboost" class="active" data-tr="LoL Boost" data-en="LoL Boost">LoL Boost</a></li>
+          <li><a href="hakkımızda.html" id="nav-about" data-tr="Hakkımızda" data-en="About Us">About Us</a></li>
+          <li><a href="iletişim.html" id="nav-contact" data-tr="İletişim" data-en="Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="user-controls">
+        <a href="login.html" class="btn btn-login" id="btn-giris" data-tr="Giriş Yap" data-en="Login">Login</a>
+        <a href="signup.html" class="btn btn-signup" id="btn-kayitol" data-tr="Kayıt Ol" data-en="Sign Up">Sign Up</a>
+        <div class="lang-switcher">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en" class="active-lang">
+        </div>
+      </div>
+      <div class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
+  </header>
 
-    <header class="main-header">
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
-                </a>
-                <div class="logo-text-group">
-                    <span class="logo-name">LEONBOOST</span>
-                    <span class="tagline">Take Your League to Victory!</span>
-                </div>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lol-boost.html" class="active">LoL Boost</a></li>
-                    <li><a href="hakkımızda.html">About Us</a></li>
-                    <li><a href="iletişim.html">Contact</a></li>
-                </ul>
-            </nav>
+  <main>
+    <section class="game-hero-banner">
+      <div class="container">
+        <h1 data-tr="League of Legends Boost" data-en="League of Legends Boost">League of Legends Boost</h1>
+      </div>
+    </section>
 
-            <div class="user-controls">
-                <a href="login.html" class="btn btn-login" id="btn-giris">Login</a>
-                <a href="signup.html" class="btn btn-signup" id="btn-kayitol">Sign Up</a>
-                <div class="lang-switcher">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr" class="active-lang">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en">
-                </div>
+    <section class="boost-services-grid">
+      <div class="container">
+        <div class="service-cards-container">
+          <a href="elo-boost-calculator.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/lol%20boost%20elo.png" alt="Elo Boost">
             </div>
-
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
+            <h3 class="card-title" data-tr="Elo Boost" data-en="Elo Boost">Elo Boost</h3>
+          </a>
+          <a href="duo-boost-calculator.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/duo%20boost%20(1).jpg" alt="Duo Boost">
             </div>
+            <h3 class="card-title" data-tr="Duo Boost" data-en="Duo Boost">Duo Boost</h3>
+          </a>
+          <a href="yerleştirme.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/League-Of-Legends-PNG-Isolated-HD-Pictures.png" alt="Placement Matches">
+            </div>
+            <h3 class="card-title" data-tr="Yerleştirme Maçları" data-en="Placement Matches">Placement Matches</h3>
+          </a>
+          <a href="challengerboost.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/yerle%C5%9Ftirme%20(1).png" alt="Challenger">
+            </div>
+            <h3 class="card-title" data-tr="Challenger Boost" data-en="Challenger Boost">Challenger Boost</h3>
+          </a>
+          <a href="coaching.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ko%C3%A7luk%20(1).png" alt="Coaching">
+            </div>
+            <h3 class="card-title" data-tr="Koçluk" data-en="Coaching">Coaching</h3>
+          </a>
+          <a href="winboost.html" class="service-card">
+            <div class="card-image">
+              <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/win%20boost.png" alt="Win Boost">
+            </div>
+            <h3 class="card-title" data-tr="Galibiyet Boost" data-en="Win Boost">Win Boost</h3>
+          </a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="elo-boost-calculator-section" style="padding-top: 100px;">
-            <div class="container">
-                <h2>Elo Boost Calculator</h2>
-
-                <div class="league-images-container">
-                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Current League" class="rank-icon">
-                    <i class="fas fa-arrow-right arrow-icon"></i>
-                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Target League" class="rank-icon">
-                </div>
-
-                <section class="lol-boost-configurator-section">
-                    <div class="container">
-                        <div class="boost-configurator">
-                            <h2>Configure Your Order</h2>
-                            <div class="config-grid">
-                                <div class="config-item">
-                                    <label for="current-rank">Current League</label>
-                                    <select id="current-rank" name="current-rank">
-                                        <option value="iron3">Iron 3</option>
-                                        <option value="iron2">Iron 2</option>
-                                        <option value="iron1">Iron 1</option>
-                                        <option value="bronze4">Bronze 4</option>
-                                        <option value="bronze3">Bronze 3</option>
-                                        <option value="bronze2">Bronze 2</option>
-                                        <option value="bronze1">Bronze 1</option>
-                                        <option value="silver4">Silver 4</option>
-                                        <option value="silver3">Silver 3</option>
-                                        <option value="silver2">Silver 2</option>
-                                        <option value="silver1">Silver 1</option>
-                                        <option value="gold4">Gold 4</option>
-                                        <option value="gold3">Gold 3</option>
-                                        <option value="gold2">Gold 2</option>
-                                        <option value="gold1">Gold 1</option>
-                                        <option value="platinum4">Platinum 4</option>
-                                        <option value="platinum3">Platinum 3</option>
-                                        <option value="platinum2">Platinum 2</option>
-                                        <option value="platinum1">Platinum 1</option>
-                                        <option value="emerald4">Emerald 4</option>
-                                        <option value="emerald3">Emerald 3</option>
-                                        <option value="emerald2">Emerald 2</option>
-                                        <option value="emerald1">Emerald 1</option>
-                                        <option value="diamond4">Diamond 4</option>
-                                        <option value="diamond3">Diamond 3</option>
-                                        <option value="diamond2">Diamond 2</option>
-                                        <option value="diamond1">Diamond 1</option>
-                                        <option value="master">Master</option>
-                                    </select>
-                                </div>
-
-                                <div class="config-item">
-                                    <label for="desired-rank">Target League</label>
-                                    <select id="desired-rank" name="desired-rank">
-                                        <option value="iron3">Iron 3</option>
-                                        <option value="iron2">Iron 2</option>
-                                        <option value="iron1">Iron 1</option>
-                                        <option value="bronze4">Bronze 4</option>
-                                        <option value="bronze3">Bronze 3</option>
-                                        <option value="bronze2">Bronze 2</option>
-                                        <option value="bronze1">Bronze 1</option>
-                                        <option value="silver4">Silver 4</option>
-                                        <option value="silver3">Silver 3</option>
-                                        <option value="silver2">Silver 2</option>
-                                        <option value="silver1">Silver 1</option>
-                                        <option value="gold4">Gold 4</option>
-                                        <option value="gold3">Gold 3</option>
-                                        <option value="gold2">Gold 2</option>
-                                        <option value="gold1">Gold 1</option>
-                                        <option value="platinum4">Platinum 4</option>
-                                        <option value="platinum3">Platinum 3</option>
-                                        <option value="platinum2">Platinum 2</option>
-                                        <option value="platinum1">Platinum 1</option>
-                                        <option value="emerald4">Emerald 4</option>
-                                        <option value="emerald3">Emerald 3</option>
-                                        <option value="emerald2">Emerald 2</option>
-                                        <option value="emerald1">Emerald 1</option>
-                                        <option value="diamond4">Diamond 4</option>
-                                        <option value="diamond3">Diamond 3</option>
-                                        <option value="diamond2">Diamond 2</option>
-                                        <option value="diamond1">Diamond 1</option>
-                                        <option value="master">Master</option>
-                                    </select>
-                                </div>
-
-                                <div class="config-item">
-                                    <label for="lane-select">Current Lane</label>
-                                    <select id="lane-select" name="lane-select">
-                                        <option value="any">Any</option>
-                                        <option value="top">Top Lane (+25%)</option>
-                                        <option value="jungle">Jungle (+25%)</option>
-                                        <option value="mid">Mid Lane (+25%)</option>
-                                        <option value="adc">ADC (+35%)</option>
-                                        <option value="support">Support (+35%)</option>
-                                        <option value="champ-select">Custom Champion Selection (+40%)</option>
-                                    </select>
-                                </div>
-
-                                <div class="config-item">
-                                    <label for="current-lp">Current Points</label>
-                                    <select id="current-lp" name="current-lp">
-                                        <option value="0-19">0-19</option>
-                                        <option value="20-39">20-39</option>
-                                        <option value="40-59">40-59</option>
-                                        <option value="60-79">60-79</option>
-                                        <option value="80-100">80-100</option>
-                                    </select>
-                                </div>
-
-                                <div class="config-item">
-                                    <label for="queue-type">Queue Type</label>
-                                    <select id="queue-type" name="queue-type">
-                                        <option value="solo">Solo/Duo Ranked</option>
-                                        <option value="duo">Flex Ranked</option>
-                                    </select>
-                                </div>
-
-                                <div class="config-item">
-                                    <label for="server">Server</label>
-                                    <select id="server" name="server">
-                                        <option value="tr">Turkey (TR)</option>
-                                        <option value="euw">Western Europe (EUW)</option>
-                                        <option value="eune">Eastern Europe (EUNE)</option>
-                                        <option value="ru">Russia (RU)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="price-display">
-                                <p>Estimated Price: <span id="final-price">0.00 TL</span></p>
-                            </div>
-                            <button class="btn btn-primary order-btn">Place Order</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-about">
-                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
-                <p id="footer-about-text">LEONBOOST provides professional and reliable boost services for LoL players.
-                    Reach your target league with us!</p>
-            </div>
-            <div class="footer-links">
-                <h3 id="footer-links-title">Quick Links</h3>
-                <ul>
-                    <li><a href="#" id="footer-link-services">Services</a></li>
-                    <li><a href="#" id="footer-link-contact">Contact</a></li>
-                    <li><a href="#" id="footer-link-terms">Terms & Conditions</a></li>
-                    <li><a href="#" id="footer-link-privacy">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3 id="footer-contact-title">Get in Touch</h3>
-                <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
-                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Our Discord Server</a>
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-            <div class="footer-payments">
-                <h3 id="footer-payments-title">Ödeme Yöntemleri</h3>
-                <div class="payment-icons">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
-                        alt="Mastercard">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
-                        alt="Visa">
-                </div>
-            </div>
+    <section class="benefits-section">
+      <div class="container">
+        <h2 data-tr="League of Legends Boost Servislerinin Faydaları Nelerdir?" data-en="What Are the Benefits of League of Legends Boost Services?">What Are the Benefits of League of Legends Boost Services?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="step-icon"><i class="fas fa-arrow-up"></i></div>
+            <h3 data-tr="Hızlı Lig Atlama" data-en="Climb Ranks Quickly">Climb Ranks Quickly</h3>
+            <p data-tr="İstediğiniz lige daha hızlı ulaşın ve yeteneklerinizi geliştirin." data-en="Reach your desired league faster and improve your skills.">Reach your desired league faster and improve your skills.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3 data-tr="Güvenli ve Gizli" data-en="Safe and Confidential">Safe and Confidential</h3>
+            <p data-tr="Hesabınızın güvenliği ve gizliliği en önemli önceliğimizdir." data-en="Your account’s security and privacy are our top priority.">Your account’s security and privacy are our top priority.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="step-icon"><i class="fas fa-users"></i></div>
+            <h3 data-tr="Profesyonel Oyuncular" data-en="Professional Players">Professional Players</h3>
+            <p data-tr="Deneyimli ve yüksek seviyeli boosterlarımızla oynayın." data-en="Play with our experienced and high-ranked boosters.">Play with our experienced and high-ranked boosters.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 data-tr="Oyun Bilginizi Geliştirin" data-en="Improve Your Game Knowledge">Improve Your Game Knowledge</h3>
+            <p data-tr="Boosterlarımızdan oyun içi ipuçları ve stratejiler öğrenin." data-en="Learn in-game tips and strategies from our boosters.">Learn in-game tips and strategies from our boosters.</p>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p id="copyright-text">&copy; 2025 LEONBOOST. Tüm hakları saklıdır.</p>
-            <p class="disclaimer-text">LEONBOOST, Riot Games Inc. ile bağlantılı değildir veya onaylanmamıştır.
-            </p>
+      </div>
+    </section>
+
+    <section class="how-it-works-section">
+      <div class="container">
+        <h2 data-tr="Sipariş Verdikten Sonra Ne Yapmalıyım?" data-en="I Ordered, What Should I Do Now?">I Ordered, What Should I Do Now?</h2>
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-icon"><i class="fas fa-user-circle"></i></div>
+            <h3 data-tr="1. Kullanıcı Paneline Giriş" data-en="1. Access User Panel">1. Access User Panel</h3>
+            <p data-tr="Sipariş verdikten sonra, ödeme başarı sayfasından \"Kullanıcı Paneli\"ne gidin." data-en="After ordering, visit the 'User Panel' from the payment success page.">After ordering, visit the "User Panel" from the payment success page.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-icon"><i class="fas fa-pencil-alt"></i></div>
+            <h3 data-tr="2. Bilgilerinizi Girin" data-en="2. Enter Your Details">2. Enter Your Details</h3>
+            <p data-tr="Siparişinizi oluşturduktan sonra, kullanıcı paneline gerekli bilgileri girin." data-en="After creating your order, enter the necessary information in the user panel.">After creating your order, enter the necessary information in the user panel.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-icon"><i class="fas fa-comments"></i></div>
+            <h3 data-tr="3. Boosterınızla Sohbet Edin" data-en="3. Chat with Your Booster">3. Chat with Your Booster</h3>
+            <p data-tr="Booster atandığında sistemimiz otomatik olarak e-posta gönderecektir. Kullanıcı panelinizden booster ile sohbet edebilirsiniz. İşleminiz tamamlandığında ayrıca e-posta bildirimi alacaksınız." data-en="When a booster is assigned, our system will automatically send an email. You can chat with your booster from your user panel. Once your boost is completed, you will receive a completion notification by email as well.">When a booster is assigned, our system will automatically send an email. You can chat with your booster from your user panel. Once your boost is completed, you will receive a completion notification by email as well.</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
-
-    <script src="script.js"></script>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Giriş Yap</h3>
-            <form>
-                <div class="form-group">
-                    <label for="login-email">E-posta</label>
-                    <input type="email" id="login-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="login-password">Şifre</label>
-                    <input type="password" id="login-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Giriş Yap</button>
-            </form>
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
+        <p data-tr="LEONBOOST, League of Legends oyuncuları için profesyonel ve güvenilir boosting hizmetleri sunar. İstediğiniz rütbeye bizimle ulaşın!" data-en="LEONBOOST provides professional and reliable boosting services for League of Legends players. Reach your desired rank with us!">LEONBOOST provides professional and reliable boosting services for League of Legends players. Reach your desired rank with us!</p>
+      </div>
+      <div class="footer-links">
+        <h3 data-tr="Hızlı Linkler" data-en="Quick Links">Quick Links</h3>
+        <ul>
+          <li><a href="#" data-tr="Hizmetler" data-en="Services">Services</a></li>
+          <li><a href="#" data-tr="Kariyer" data-en="Careers">Careers</a></li>
+          <li><a href="#" data-tr="Blog" data-en="Blog">Blog</a></li>
+          <li><a href="#" data-tr="Gizlilik Politikası" data-en="Privacy Policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3 data-tr="Bize Ulaşın" data-en="Contact Us">Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> leonboostofficial@gmail.com</p>
+        <p><i class="fab fa-discord"></i> <a href="https://discord.gg/SCQdtbWb" target="_blank" data-tr="Discord Sunucumuz" data-en="Our Discord Server">Our Discord Server</a></p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/leonboostoffcl" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579399974014" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </div>
+      </div>
+      <div class="footer-payments">
+        <h3 id="footer-payments-title" data-tr="Ödeme Yöntemleri" data-en="Payment Methods">Payment Methods</h3>
+        <div class="payment-icons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png" alt="Mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
+          <img src="https://www.epay.com/adminapi/config/getImg?fileName=7f64c382-edc2-4cdc-91c4-3c42ab41ecf5" alt="E-Pay">
+          <img src="https://logos-world.net/wp-content/uploads/2021/03/Stripe-Emblem.png" alt="Stripe">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/640px-Google_Pay_Logo.svg.png" alt="Google Pay">
+        </div>
+      </div>
     </div>
-
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Kayıt Ol</h3>
-            <form>
-                <div class="form-group">
-                    <label for="signup-username">Kullanıcı Adı</label>
-                    <input type="text" id="signup-username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-email">E-posta</label>
-                    <input type="email" id="signup-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-password">Şifre</label>
-                    <input type="password" id="signup-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-            </form>
-        </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LEONBOOST. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">All rights reserved.</span></p>
+      <p class="disclaimer-text" data-tr="Riot Games, Inc. hiçbir şekilde LEONBOOST ile bağlantılı değildir ve onu onaylamamaktadır." data-en="Riot Games, Inc. is not endorsed by or affiliated with LEONBOOST in any way.">Riot Games, Inc. is not endorsed by or affiliated with LEONBOOST in any way.</p>
     </div>
+  </footer>
 
+  <button class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const langButtons = document.querySelectorAll(".lang-switcher img");
+    const translatableElements = document.querySelectorAll("[data-tr][data-en]");
+
+    langButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const selectedLang = this.getAttribute("data-lang");
+
+        // aktif bayrak
+        langButtons.forEach(btn => btn.classList.remove("active-lang"));
+        this.classList.add("active-lang");
+
+        // yazıları değiştir
+        translatableElements.forEach(el => {
+          el.textContent = el.getAttribute("data-" + selectedLang);
+        });
+
+        localStorage.setItem("selectedLang", selectedLang);
+      });
+    });
+
+    // sayfa açıldığında dil yükle
+    const savedLang = localStorage.getItem("selectedLang") || "en";
+    document.querySelector(`.lang-switcher img[data-lang="${savedLang}"]`)?.click();
+  });
+  </script>
 </body>
-
-
 </html>
-
-
-
