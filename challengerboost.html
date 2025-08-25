@@ -14,14 +14,16 @@
 
 <body>
     <div class="global-background-lion-overlay">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+            alt="LEONBOOST Background Lion">
     </div>
 
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+                        alt="LEONBOOST Logo">
                 </a>
                 <div class="logo-text-group">
                     <span class="logo-name">LEONBOOST</span>
@@ -41,8 +43,10 @@
                 <a href="login.html" class="btn btn-login" id="btn-giris">Login</a>
                 <a href="signup.html" class="btn btn-signup" id="btn-kayitol">Sign Up</a>
                 <div class="lang-switcher">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en" class="active-lang">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png"
+                        alt="Turkish" data-lang="tr">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png"
+                        alt="English" data-lang="en" class="active-lang">
                 </div>
             </div>
 
@@ -61,21 +65,6 @@
                         <div class="boost-configurator">
                             <h2>Configure Your Order</h2>
                             <div class="config-grid">
-                                <div class="config-item">
-                                    <label for="current-rank">Current League</label>
-                                    <select id="current-rank" name="current-rank">
-                                        <option value="unranked">Unranked</option>
-                                        <option value="iron">Iron</option>
-                                        <option value="bronze">Bronze</option>
-                                        <option value="silver">Silver</option>
-                                        <option value="gold">Gold</option>
-                                        <option value="platinum">Platinum</option>
-                                        <option value="emerald">Emerald</option>
-                                        <option value="diamond">Diamond</option>
-                                        <option value="master">Mastery</option>
-                                    </select>
-                                </div>
-
                                 <div class="config-item">
                                     <label for="lane-select">Current Lane</label>
                                     <select id="lane-select" name="lane-select">
@@ -106,15 +95,11 @@
                                         <option value="ru">Russia (RU)</option>
                                     </select>
                                 </div>
-                                    <div class="config-item">
-                                    <label for="server">Number of Matches</label>
-                                    <select id="server" name="server">
-                                        <option value="one">1</option>
-                                        <option value="two">2</option>
-                                        <option value="three">3</option>
-                                        <option value="four">4</option>
-                                        <option value="five">5</option>
-                                    </select>
+
+                                <!-- LP seçimi əlavə edildi -->
+                                <div class="config-item">
+                                    <label for="lp-input">Current LP (0 - 200)</label>
+                                    <input type="number" id="lp-input" name="lp-input" min="0" max="200" value="0">
                                 </div>
                             </div>
                             <div class="price-display">
@@ -131,7 +116,8 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
+                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+                    alt="LEONBOOST Logo" class="footer-logo">
                 <p id="footer-about-text">LEONBOOST provides professional and reliable boost services for LoL players.
                     Reach your target league with us!</p>
             </div>
@@ -150,7 +136,8 @@
                 <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Our Discord Server</a>
                 </p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </div>
@@ -173,49 +160,30 @@
     </footer>
 
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
-    <script src="script.js"></script>
 
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Giriş Yap</h3>
-            <form>
-                <div class="form-group">
-                    <label for="login-email">E-posta</label>
-                    <input type="email" id="login-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="login-password">Şifre</label>
-                    <input type="password" id="login-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Giriş Yap</button>
-            </form>
-        </div>
-    </div>
+    <script>
+        // Challenger LP limiti
+        const MAX_CHALLENGER_LP = 200;
+        const lpInput = document.getElementById("lp-input");
 
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Kayıt Ol</h3>
-            <form>
-                <div class="form-group">
-                    <label for="signup-username">Kullanıcı Adı</label>
-                    <input type="text" id="signup-username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-email">E-posta</label>
-                    <input type="email" id="signup-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-password">Şifre</label>
-                    <input type="password" id="signup-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-            </form>
-        </div>
-    </div>
+        function calculatePrice() {
+            let basePrice = 50; // əsas qiymət
+            let lp = parseInt(lpInput.value) || 0;
+
+            if (lp > MAX_CHALLENGER_LP) {
+                lp = MAX_CHALLENGER_LP;
+                lpInput.value = MAX_CHALLENGER_LP;
+            }
+
+            // hər 10 LP üçün +5$
+            let lpPrice = (lp / 10) * 5;
+
+            let finalPrice = basePrice + lpPrice;
+            document.getElementById("final-price").textContent = finalPrice.toFixed(2) + " $";
+        }
+
+        lpInput.addEventListener("input", calculatePrice);
+        calculatePrice();
+    </script>
 </body>
 </html>
-
-
-
