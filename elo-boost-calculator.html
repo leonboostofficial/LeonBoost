@@ -276,6 +276,33 @@
             </form>
         </div>
     </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const langButtons = document.querySelectorAll(".lang-switcher img");
+    const translatableElements = document.querySelectorAll("[data-tr][data-en]");
+
+    langButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const selectedLang = this.getAttribute("data-lang");
+
+            // aktif bayrak stili
+            langButtons.forEach(btn => btn.classList.remove("active-lang"));
+            this.classList.add("active-lang");
+
+            // tüm yazıları değiştir
+            translatableElements.forEach(el => {
+                el.textContent = el.getAttribute("data-" + selectedLang);
+            });
+
+            localStorage.setItem("selectedLang", selectedLang);
+        });
+    });
+
+    // sayfa açıldığında önceki seçim yüklenir
+    const savedLang = localStorage.getItem("selectedLang") || "en";
+    document.querySelector(`.lang-switcher img[data-lang="${savedLang}"]`)?.click();
+});
+</script>
 
 </body>
 
