@@ -63,69 +63,52 @@
                 <section class="lol-boost-configurator-section">
                     <div class="container">
                         <div class="boost-configurator">
-    <h2>Configure Your Order</h2>
-</div>
- </div>
-<script>
-    const currentInput = document.getElementById("currentlp");
-    const targetInput = document.getElementById("targetlp");
+                            <h2>Configure Your Order</h2>
 
-    function updateMax() {
-        let currentVal = parseInt(currentInput.value) || 0;
-        targetInput.max = currentVal + 200; // maksimum +200 olabilir
-        if (parseInt(targetInput.value) > targetInput.max) {
-            targetInput.value = targetInput.max; // fazlaysa sınıra çek
-        }
-    }
+                            <div class="config-item">
+                                <label for="currentlp">Mevcut Puan</label>
+                                <input type="number" min="0" value="0" id="currentlp">
+                            </div>
 
-    // Mevcut puan değiştikçe kontrol et
-    currentInput.addEventListener("input", updateMax);
+                            <div class="config-item">
+                                <label for="targetlp">Hedef Puan</label>
+                                <input type="number" min="40" value="40" id="targetlp">
+                            </div>
 
-    // Sayfa ilk açıldığında da çalışsın
-    updateMax();
-</script>
+                            <div class="config-item">
+                                <label for="lane-select">Current Lane</label>
+                                <select id="lane-select" name="lane-select">
+                                    <option value="any">Any</option>
+                                    <option value="top">Top Lane (+25%)</option>
+                                    <option value="jungle">Jungle (+25%)</option>
+                                    <option value="mid">Mid Lane (+25%)</option>
+                                    <option value="adc">ADC (+35%)</option>
+                                    <option value="support">Support (+35%)</option>
+                                    <option value="champ-select">Custom Champion Selection (+40%)</option>
+                                </select>
+                            </div>
 
-                                <div class="config-item">
-                                    <label for="lane-select">Current Lane</label>
-                                    <select id="lane-select" name="lane-select">
-                                        <option value="any">Any</option>
-                                        <option value="top">Top Lane (+25%)</option>
-                                        <option value="jungle">Jungle (+25%)</option>
-                                        <option value="mid">Mid Lane (+25%)</option>
-                                        <option value="adc">ADC (+35%)</option>
-                                        <option value="support">Support (+35%)</option>
-                                        <option value="champ-select">Custom Champion Selection (+40%)</option>
-                                    </select>
-                                </div>
+                            <div class="config-item">
+                                <label for="queue-type">Queue Type</label>
+                                <select id="queue-type" name="queue-type">
+                                    <option value="solo">Solo/Duo Ranked</option>
+                                    <option value="duo">Flex Ranked</option>
+                                </select>
+                            </div>
 
-                                <div class="config-item">
-                                    <label for="queue-type">Queue Type</label>
-                                    <select id="queue-type" name="queue-type">
-                                        <option value="solo">Solo/Duo Ranked</option>
-                                        <option value="duo">Flex Ranked</option>
-                                    </select>
-                                </div>
+                            <div class="config-item">
+                                <label for="server">Server</label>
+                                <select id="server" name="server">
+                                    <option value="tr">Turkey (TR)</option>
+                                    <option value="euw">Western Europe (EUW)</option>
+                                    <option value="eune">Eastern Europe (EUNE)</option>
+                                    <option value="ru">Russia (RU)</option>
+                                </select>
+                            </div>
 
-                                <div class="config-item">
-                                    <label for="server">Server</label>
-                                    <select id="server" name="server">
-                                        <option value="tr">Turkey (TR)</option>
-                                        <option value="euw">Western Europe (EUW)</option>
-                                        <option value="eune">Eastern Europe (EUNE)</option>
-                                        <option value="ru">Russia (RU)</option>
-                                    </select>
-                                </div>
-                    <div class="config-item">
-        <div class="config-item">
-            <label for="currentlp">Mevcut Puan</label>
-            <input type="number" min="0" value="0" name="currentlp" id="currentlp">
+                            <p>Toplam Seviye: <span id="total-level">40</span></p>
+                            <p>Fiyat: <span id="final-price">50 $</span></p>
 
-            <div class="config-item">
-                <label for="targetlp">Hedef Puan</label>
-                <input type="number" min="40" value="40" name="targetlp" id="targetlp">
-            </div>
-        </div>
-    </div>
                             <button class="btn btn-primary order-btn">Place Order</button>
                         </div>
                     </div>
@@ -183,31 +166,42 @@
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        const MAX_CHALLENGER_LP = 200;
-        const lpInput = document.getElementById("lp-input");
+        const currentInput = document.getElementById("currentlp");
+        const targetInput = document.getElementById("targetlp");
 
-        function calculatePrice() {
-            let basePrice = 50; // əsas qiymət
-            let lp = parseInt(lpInput.value) || 0;
+        function updateTargetMax() {
+            let currentVal = parseInt(currentInput.value) || 0;
+            let maxTarget = currentVal + 200;
+            targetInput.max = maxTarget;
 
-            if (lp > MAX_CHALLENGER_LP) {
-                lp = MAX_CHALLENGER_LP;
-                lpInput.value = MAX_CHALLENGER_LP;
+            if (parseInt(targetInput.value) > maxTarget) {
+                targetInput.value = maxTarget;
             }
-
-            // hər 10 LP üçün +5$
-            let lpPrice = (lp / 10) * 5;
-            let finalPrice = basePrice + lpPrice;
-
-            // ümumi level (40 + seçilən LP)
-            let totalLevel = 40 + lp;
-
-            document.getElementById("final-price").textContent = finalPrice.toFixed(2) + " $";
-            document.getElementById("total-level").textContent = totalLevel;
+            calculatePrice();
         }
 
-        lpInput.addEventListener("input", calculatePrice);
-        calculatePrice();
+        function calculatePrice() {
+            let basePrice = 50;
+            let currentVal = parseInt(currentInput.value) || 0;
+            let targetVal = parseInt(targetInput.value) || 40;
+
+            if (targetVal <= currentVal) {
+                targetVal = currentVal + 1;
+                targetInput.value = targetVal;
+            }
+
+            let gainedLP = targetVal - currentVal;
+            let lpPrice = (gainedLP / 10) * 5;
+            let finalPrice = basePrice + lpPrice;
+
+            document.getElementById("final-price").textContent = finalPrice.toFixed(2) + " $";
+            document.getElementById("total-level").textContent = targetVal;
+        }
+
+        currentInput.addEventListener("input", updateTargetMax);
+        targetInput.addEventListener("input", calculatePrice);
+
+        updateTargetMax();
     </script>
 </body>
 </html>
