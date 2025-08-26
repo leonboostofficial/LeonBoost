@@ -63,8 +63,39 @@
                 <section class="lol-boost-configurator-section">
                     <div class="container">
                         <div class="boost-configurator">
-                            <h2>Configure Your Order</h2>
-                            <div class="config-grid">
+    <h2>Configure Your Order</h2>
+    <div class="config-grid">
+        <div class="config-item">
+            <label for="currentlp">Mevcut Puan</label>
+            <input type="number" min="0" value="0" name="currentlp" id="currentlp">
+
+            <div class="group">
+                <label for="targetlp">Hedef Puan</label>
+                <input type="number" min="40" value="40" name="targetlp" id="targetlp">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const currentInput = document.getElementById("currentlp");
+    const targetInput = document.getElementById("targetlp");
+
+    function updateMax() {
+        let currentVal = parseInt(currentInput.value) || 0;
+        targetInput.max = currentVal + 200; // maksimum +200 olabilir
+        if (parseInt(targetInput.value) > targetInput.max) {
+            targetInput.value = targetInput.max; // fazlaysa sınıra çek
+        }
+    }
+
+    // Mevcut puan değiştikçe kontrol et
+    currentInput.addEventListener("input", updateMax);
+
+    // Sayfa ilk açıldığında da çalışsın
+    updateMax();
+</script>
+
                                 <div class="config-item">
                                     <label for="lane-select">Current Lane</label>
                                     <select id="lane-select" name="lane-select">
@@ -95,19 +126,6 @@
                                         <option value="ru">Russia (RU)</option>
                                     </select>
                                 </div>
-
-                                <!-- LP seçimi -->
-                                <div class="config-item">
-                                    <label for="lp-input">Current LP (0 - 200)</label>
-                                    <input type="number" id="lp-input" name="lp-input" min="0" max="200" value="0">
-                                </div>
-                            </div>
-
-                            <div class="price-display">
-                                <p>Estimated Price: <span id="final-price">0.00 $</span></p>
-                                <p>Total Level: <span id="total-level">40</span></p>
-                            </div>
-
                             <button class="btn btn-primary order-btn">Place Order</button>
                         </div>
                     </div>
