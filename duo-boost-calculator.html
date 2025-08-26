@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LEONBOOST - Elo Boost Calculator</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEONBOOST - Elo Boost Hesapla</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-  <div class="global-background-lion-overlay">
-    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
-  </div>
-
-  <header class="main-header">
-    <div class="container header-content">
-      <div class="logo">
-        <a href="index.html">
-          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
-        </a>
-        <div class="logo-text-group">
-          <span class="logo-name">LEONBOOST</span>
-          <span class="tagline" data-en="Take Your League to Victory!" data-tr="Ligini Zafere Taşı!">Take Your League to Victory!</span>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
-          <li><a href="lol-boost.html" class="active" data-en="LoL Boost" data-tr="LoL Boost">LoL Boost</a></li>
-          <li><a href="hakkımızda.html" data-en="About Us" data-tr="Hakkımızda">About Us</a></li>
-          <li><a href="iletişim.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="user-controls">
-        <a href="login.html" class="btn btn-login" id="btn-giris" data-en="Login" data-tr="Giriş Yap">Login</a>
-        <a href="signup.html" class="btn btn-signup" id="btn-kayitol" data-en="Sign Up" data-tr="Kayıt Ol">Sign Up</a>
-        <div class="lang-switcher">
-          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr">
-          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en" class="active-lang">
-        </div>
-      </div>
-
-      <div class="hamburger-menu">
-        <i class="fas fa-bars"></i>
-      </div>
+    <div class="global-background-lion-overlay">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Arka Plan Aslan">
     </div>
-  </header>
 
-  <main>
-    <section class="elo-boost-calculator-section" style="padding-top: 100px;">
-      <div class="container">
-        <h2 data-en="Duo Boost Calculator" data-tr="Duo Boost Hesaplayıcı">Duo Boost Calculator</h2>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+                </a>
+                <div class="logo-text-group">
+                    <span class="logo-name">LEONBOOST</span>
+                    <span class="tagline">Liginizi Zafere Taşıyın!</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="tftboost.html" class="active">TFT Boost</a></li>
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                    <li><a href="iletişim.html">İletişim</a></li>
+                </ul>
+            </nav>
 
-        <div class="league-images-container">
-          <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Current Rank" class="rank-icon">
-          <i class="fas fa-arrow-right arrow-icon"></i>
-          <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Desired Rank" class="rank-icon">
+            <div class="user-controls">
+                <a href="#" class="btn btn-login">Giriş Yap</a>
+                <a href="#" class="btn btn-signup">Kayıt Ol</a>
+                <div class="lang-switcher">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Türkçe" data-lang="tr" class="active-lang">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en">
+                </div>
+            </div>
+
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+    </header>
 
-        <section class="lol-boost-configurator-section">
-          <div class="container">
-            <div class="boost-configurator">
-              <h2 data-en="Configure Your Order" data-tr="Siparişini Özelleştir">Configure Your Order</h2>
-              <div class="config-grid">
-<div class="config-item">
+    <main>
+        <section class="elo-boost-calculator-section" style="padding-top: 100px;">
+            <div class="container">
+                <h2>Elo Boost Hesaplayıcı</h2>
+
+                <div class="league-images-container">
+                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png
+" alt="Mevcut Lig" class="rank-icon">
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Hedef Lig" class="rank-icon">
+                </div>
+
+                <section class="lol-boost-configurator-section">
+                    <div class="container">
+                        <div class="boost-configurator">
+                            <h2>Siparişinizi Yapılandırın</h2>
+                            <div class="config-grid">
                                 <div class="config-item">
                                     <label for="current-rank">Mevcut Lig</label>
                                     <select id="current-rank" name="current-rank">
@@ -133,94 +136,150 @@
                                         <option value="master">Ustalık</option>
                                     </select>
                                 </div>
-                <div class="config-item">
-                  <label for="lane-select" data-en="Current Lane" data-tr="Mevcut Koridor">Current Lane</label>
-                  <select id="lane-select" name="lane-select">
-                    <option value="any" data-en="Doesn't Matter" data-tr="Farketmez">Doesn't Matter</option>
-                    <option value="top" data-en="Top Lane (+25%)" data-tr="Üst Koridor (+25%)">Top Lane (+25%)</option>
-                    <option value="jungle" data-en="Jungle (+25%)" data-tr="Orman (+25%)">Jungle (+25%)</option>
-                    <option value="mid" data-en="Mid Lane (+25%)" data-tr="Orta Koridor (+25%)">Mid Lane (+25%)</option>
-                    <option value="adc" data-en="ADC (+35%)" data-tr="Nişancı (+35%)">ADC (+35%)</option>
-                    <option value="support" data-en="Support (+35%)" data-tr="Destek (+35%)">Support (+35%)</option>
-                    <option value="champ-select" data-en="Specific Champion Selection (+40%)" data-tr="Şampiyon Seçimi (+40%)">Specific Champion Selection (+40%)</option>
-                  </select>
-                </div>
 
-                <div class="config-item">
-                  <label for="current-lp" data-en="Current LP" data-tr="Mevcut LP">Current LP</label>
-                  <select id="current-lp" name="current-lp">
-                    <option value="0-19">0-19</option>
-                    <option value="20-39">20-39</option>
-                    <option value="40-59">40-59</option>
-                    <option value="60-79">60-79</option>
-                    <option value="80-100">80-100</option>
-                  </select>
-                </div>
+                                <div class="config-item">
+                                    <label for="lane-select">Mevcut Koridor</label>
+                                    <select id="lane-select" name="lane-select">
+                                        <option value="any">Fark Etmez</option>
+                                        <option value="top">Üst Koridor (+25%)</option>
+                                        <option value="jungle">Orman (+25%)</option>
+                                        <option value="mid">Orta Koridor (+25%)</option>
+                                        <option value="adc">ADC (+35%)</option>
+                                        <option value="support">Destek (+35%)</option>
+                                        <option value="champ-select">Özel Şampiyon Seçimi (+40%)</option>
+                                    </select>
+                                </div>
 
-                <div class="config-item">
-                  <label for="queue-type" data-en="Queue Type" data-tr="Kuyruk Türü">Queue Type</label>
-                  <select id="queue-type" name="queue-type">
-                    <option value="solo" data-en="Solo/Duo Ranked" data-tr="Solo/Duo Sıralı">Solo/Duo Ranked</option>
-                    <option value="duo" data-en="Flex Ranked" data-tr="Esnek Sıralı">Flex Ranked</option>
-                  </select>
-                </div>
+                                <div class="config-item">
+                                    <label for="current-lp">Mevcut Puan</label>
+                                    <select id="current-lp" name="current-lp">
+                                        <option value="0-19">0-19</option>
+                                        <option value="20-39">20-39</option>
+                                        <option value="40-59">40-59</option>
+                                        <option value="60-79">60-79</option>
+                                        <option value="80-100">80-100</option>
+                                    </select>
+                                </div>
 
-                <div class="config-item">
-                  <label for="server" data-en="Server" data-tr="Sunucu">Server</label>
-                  <select id="server" name="server"> ... </select>
-                </div>
-              </div>
-              <div class="price-display">
-                <p data-en="Estimated Price:" data-tr="Tahmini Fiyat:">Estimated Price: <span id="final-price">0.00 TL</span></p>
-              </div>
-              <button class="btn btn-primary order-btn" data-en="Place Order" data-tr="Sipariş Ver">Place Order</button>
+                                <div class="config-item">
+                                    <label for="queue-type">Dereceli Türü</label>
+                                    <select id="queue-type" name="queue-type">
+                                        <option value="solo">Tekli-Çiftli Dereceli</option>
+                                        <option value="duo">Esnek Dereceli</option>
+                                    </select>
+                                </div>
+
+                                <div class="config-item">
+                                    <label for="server">Sunucu</label>
+                                    <select id="server" name="server">
+                                        <option value="tr">Türkiye (TR)</option>
+                                        <option value="euw">Batı Avrupa (EUW)</option>
+                                        <option value="eune">Doğu Avrupa (EUNE)</option>
+                                        <option value="ru">Rusya(RU)</option>
+                                    </select>
+                                </div>
+
+                                </div>
+                            <div class="price-display">
+                                <p>Yaklaşık Fiyat: <span id="final-price">0.00 TL</span></p>
+                            </div>
+                            <button class="btn btn-primary order-btn">Sipariş Ver</button>
+                        </div>
+                    </div>
+                </section>
             </div>
-          </div>
         </section>
-      </div>
-    </section>
-  </main>
+    </main>
 
-  <footer class="main-footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
-        <p data-en="LEONBOOST provides professional and reliable boost services for LoL players. Reach your desired rank with us!"
-           data-tr="LEONBOOST, LoL oyuncularına profesyonel ve güvenilir boost hizmeti sunar. Hedef ligine bizimle ulaş!">
-          LEONBOOST provides professional and reliable boost services for LoL players. Reach your desired rank with us!
-        </p>
-      </div>
-      <div class="footer-links">
-        <h3 data-en="Quick Links" data-tr="Hızlı Bağlantılar">Quick Links</h3>
-        <ul>
-          <li><a href="#" data-en="Services" data-tr="Hizmetler">Services</a></li>
-          <li><a href="#" data-en="Contact" data-tr="İletişim">Contact</a></li>
-          <li><a href="#" data-en="Terms & Conditions" data-tr="Şartlar & Koşullar">Terms & Conditions</a></li>
-          <li><a href="#" data-en="Privacy Policy" data-tr="Gizlilik Politikası">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3 data-en="Contact Us" data-tr="Bize Ulaş">Contact Us</h3>
-        <p><i class="fas fa-envelope"></i> <span>info@leonboost.com</span></p>
-        <p><i class="fab fa-discord"></i> <a href="#" target="_blank" data-en="Our Discord Server" data-tr="Discord Sunucumuz">Our Discord Server</a></p>
-      </div>
-      <div class="footer-payments">
-        <h3 data-en="Payment Methods" data-tr="Ödeme Yöntemleri">Payment Methods</h3>
-        <div class="payment-icons">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
+                <p id="footer-about-text">LEONBOOST, LoL oyuncularına profesyonel ve güvenilir boost hizmetleri
+                    sunar.
+                    Hedefinizdeki lige bizimle ulaşın!</p>
+            </div>
+            <div class="footer-links">
+                <h3 id="footer-links-title">Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="#" id="footer-link-services">Hizmetler</a></li>
+                    <li><a href="#" id="footer-link-contact">İletişim</a></li>
+                    <li><a href="#" id="footer-link-terms">Şartlar & Koşullar</a></li>
+                    <li><a href="#" id="footer-link-privacy">Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 id="footer-contact-title">Bize Ulaşın</h3>
+                <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
+                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Discord
+                        Sunucumuz</a>
+                </p>
+               <div class="social-icons">
+                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-payments">
+                <h3 id="footer-payments-title">Ödeme Yöntemleri</h3>
+                <div class="payment-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
+                        alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
+                        alt="Visa">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p data-en="© 2025 LEONBOOST. All rights reserved." data-tr="© 2025 LEONBOOST. Tüm hakları saklıdır.">© 2025 LEONBOOST. All rights reserved.</p>
-      <p class="disclaimer-text" data-en="LEONBOOST is not affiliated with or endorsed by Riot Games Inc."
-         data-tr="LEONBOOST, Riot Games Inc. ile bağlantılı değildir ve onaylanmamıştır.">
-         LEONBOOST is not affiliated with or endorsed by Riot Games Inc.
-      </p>
-    </div>
-  </footer>
+        <div class="footer-bottom">
+            <p id="copyright-text">&copy; 2025 LEONBOOST. Tüm hakları saklıdır.</p>
+            <p class="disclaimer-text">LEONBOOST, Riot Games Inc. ile bağlantılı değildir veya onaylanmamıştır.
+            </p>
+        </div>
+    </footer>
 
+    <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Giriş Yap</h3>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">E-posta</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Şifre</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Kayıt Ol</h3>
+            <form>
+                <div class="form-group">
+                    <label for="signup-username">Kullanıcı Adı</label>
+                    <input type="text" id="signup-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">E-posta</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Şifre</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const langButtons = document.querySelectorAll(".lang-switcher img");
