@@ -1,198 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEONBOOST - Calculate Elo Boost</title>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEONBOOST - Coaching Boost</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="global-background-lion-overlay">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
-    </div>
+  <div class="global-background-lion-overlay">
+    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
+  </div>
 
-    <header class="main-header">
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
-                </a>
-                <div class="logo-text-group">
-                    <span class="logo-name">LEONBOOST</span>
-                    <span class="tagline">Take Your League to Victory!</span>
-                </div>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lol-boost.html" class="active">LoL Boost</a></li>
-                    <li><a href="hakkımızda.html">About Us</a></li>
-                    <li><a href="iletişim.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="user-controls">
-                <a href="login.html" class="btn btn-login" id="btn-login">Login</a>
-                <a href="signup.html" class="btn btn-signup" id="btn-signup">Sign Up</a>
-                <div class="lang-switcher">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en" class="active-lang">
-                </div>
-            </div>
-
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+  <header class="main-header">
+    <div class="container header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+        </a>
+        <div class="logo-text-group">
+          <span class="logo-name">LEONBOOST</span>
+          <span class="tagline" data-en="Take Your League to Victory!" data-tr="Ligini Zafere Taşı!">Take Your League to Victory!</span>
         </div>
-    </header>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+          <li><a href="lol-boost.html" class="active" data-en="LoL Boost" data-tr="LoL Boost">LoL Boost</a></li>
+          <li><a href="hakkımızda.html" data-en="About Us" data-tr="Hakkımızda">About Us</a></li>
+          <li><a href="iletişim.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
+        </ul>
+      </nav>
 
-    <main>
-        <section class="elo-boost-calculator-section" style="padding-top: 100px;">
-            <div class="container">
-                <h2>Coaching Boost Calculator</h2>
-                <section class="lol-boost-configurator-section">
-                    <div class="container">
-                        <div class="boost-configurator">
-                            <h2>Configure Your Order</h2>
-                            <div class="config-grid">
-                                <div class="config-item">
-                                    <label for="current-rank">Coach's Rank</label>
-                                    <select id="current-rank" name="current-rank">
-                                        <option value="unranked">Unranked</option>
-                                        <option value="challenger">Challenger</option>
-                                        <option value="master">Master</option>
-                                        <option value="grandmaster">Grandmaster</option>
-                                    </select>
-                                </div>
+      <div class="user-controls">
+        <a href="login.html" class="btn btn-login" id="btn-login" data-en="Login" data-tr="Giriş">Login</a>
+        <a href="signup.html" class="btn btn-signup" id="btn-signup" data-en="Sign Up" data-tr="Kayıt Ol">Sign Up</a>
+        <div class="lang-switcher">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr">
+          <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en" class="active-lang">
+        </div>
+      </div>
 
-                                <div class="config-item">
-                                    <label for="lane-select">Preferred Lane</label>
-                                    <select id="lane-select" name="lane-select">
-                                        <option value="any">Any</option>
-                                        <option value="top">Top Lane (+25%)</option>
-                                        <option value="jungle">Jungle (+25%)</option>
-                                        <option value="mid">Mid Lane (+25%)</option>
-                                        <option value="adc">ADC (+35%)</option>
-                                        <option value="support">Support (+35%)</option>
-                                        <option value="champ-select">Custom Champion Selection (+40%)</option>
-                                    </select>
-                                </div>
-                                <div class="config-item">
-                                    <label for="server">Lesson Duration</label>
-                                    <select id="server" name="server">
-                                        <option value="one">1 Hour</option>
-                                        <option value="two">2 Hours</option>
-                                        <option value="three">3 Hours</option>
-                                        <option value="four">4 Hours</option>
-                                        <option value="five">5 Hours</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="price-display">
-                                <p>Estimated Price: <span id="final-price">0.00 USD</span></p>
-                            </div>
-                            <button class="btn btn-primary order-btn">Place Order</button>
-                        </div>
-                    </div>
-                </section>
+      <div class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="elo-boost-calculator-section" style="padding-top: 100px;">
+      <div class="container">
+        <h2 data-en="Coaching Boost Calculator" data-tr="Koçluk Boost Hesaplayıcı">Coaching Boost Calculator</h2>
+        <section class="lol-boost-configurator-section">
+          <div class="container">
+            <div class="boost-configurator">
+              <h2 data-en="Configure Your Order" data-tr="Siparişini Yapılandır">Configure Your Order</h2>
+              <div class="config-grid">
+                <div class="config-item">
+                  <label for="current-rank" data-en="Coach's Rank" data-tr="Koçun Rütbesi">Coach's Rank</label>
+                  <select id="current-rank" name="current-rank">
+                    <option value="unranked" data-en="Unranked" data-tr="Derecesiz">Unranked</option>
+                    <option value="challenger" data-en="Challenger" data-tr="Challenger">Challenger</option>
+                    <option value="master" data-en="Master" data-tr="Usta">Master</option>
+                    <option value="grandmaster" data-en="Grandmaster" data-tr="Büyük Usta">Grandmaster</option>
+                  </select>
+                </div>
+
+                <div class="config-item">
+                  <label for="lane-select" data-en="Preferred Lane" data-tr="Tercih Edilen Koridor">Preferred Lane</label>
+                  <select id="lane-select" name="lane-select">
+                    <option value="any" data-en="Any" data-tr="Farketmez">Any</option>
+                    <option value="top" data-en="Top Lane (+25%)" data-tr="Üst Koridor (+25%)">Top Lane (+25%)</option>
+                    <option value="jungle" data-en="Jungle (+25%)" data-tr="Orman (+25%)">Jungle (+25%)</option>
+                    <option value="mid" data-en="Mid Lane (+25%)" data-tr="Orta Koridor (+25%)">Mid Lane (+25%)</option>
+                    <option value="adc" data-en="ADC (+35%)" data-tr="Nişancı (+35%)">ADC (+35%)</option>
+                    <option value="support" data-en="Support (+35%)" data-tr="Destek (+35%)">Support (+35%)</option>
+                    <option value="champ-select" data-en="Custom Champion Selection (+40%)" data-tr="Özel Şampiyon Seçimi (+40%)">Custom Champion Selection (+40%)</option>
+                  </select>
+                </div>
+
+                <div class="config-item">
+                  <label for="server" data-en="Lesson Duration" data-tr="Ders Süresi">Lesson Duration</label>
+                  <select id="server" name="server">
+                    <option value="one" data-en="1 Hour" data-tr="1 Saat">1 Hour</option>
+                    <option value="two" data-en="2 Hours" data-tr="2 Saat">2 Hours</option>
+                    <option value="three" data-en="3 Hours" data-tr="3 Saat">3 Hours</option>
+                    <option value="four" data-en="4 Hours" data-tr="4 Saat">4 Hours</option>
+                    <option value="five" data-en="5 Hours" data-tr="5 Saat">5 Hours</option>
+                  </select>
+                </div>
+              </div>
+              <div class="price-display">
+                <p><span data-en="Estimated Price:" data-tr="Tahmini Fiyat:">Estimated Price:</span> <span id="final-price">0.00 USD</span></p>
+              </div>
+              <button class="btn btn-primary order-btn" data-en="Place Order" data-tr="Sipariş Ver">Place Order</button>
             </div>
+          </div>
         </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-about">
-                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
-                <p id="footer-about-text">LEONBOOST provides professional and reliable boost services for LoL players.
-                    Reach your target league with us!</p>
-            </div>
-            <div class="footer-links">
-                <h3 id="footer-links-title">Quick Links</h3>
-                <ul>
-                    <li><a href="#" id="footer-link-services">Services</a></li>
-                    <li><a href="#" id="footer-link-contact">Contact</a></li>
-                    <li><a href="#" id="footer-link-terms">Terms & Conditions</a></li>
-                    <li><a href="#" id="footer-link-privacy">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3 id="footer-contact-title">Get in Touch</h3>
-                <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
-                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Join Our Discord Server</a>
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-            <div class="footer-payments">
-                <h3 id="footer-payments-title">Payment Methods</h3>
-                <div class="payment-icons">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
-                        alt="Mastercard">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
-                        alt="Visa">
-                </div>
-            </div>
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
+        <p id="footer-about-text" data-en="LEONBOOST provides professional and reliable boost services for LoL players. Reach your target league with us!" data-tr="LEONBOOST, LoL oyuncuları için profesyonel ve güvenilir boost hizmetleri sunar. Hedef ligine bizimle ulaş!">LEONBOOST provides professional and reliable boost services for LoL players. Reach your target league with us!</p>
+      </div>
+      <div class="footer-links">
+        <h3 id="footer-links-title" data-en="Quick Links" data-tr="Hızlı Bağlantılar">Quick Links</h3>
+        <ul>
+          <li><a href="#" id="footer-link-services" data-en="Services" data-tr="Hizmetler">Services</a></li>
+          <li><a href="#" id="footer-link-contact" data-en="Contact" data-tr="İletişim">Contact</a></li>
+          <li><a href="#" id="footer-link-terms" data-en="Terms & Conditions" data-tr="Şartlar & Koşullar">Terms & Conditions</a></li>
+          <li><a href="#" id="footer-link-privacy" data-en="Privacy Policy" data-tr="Gizlilik Politikası">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3 id="footer-contact-title" data-en="Get in Touch" data-tr="Bize Ulaş">Get in Touch</h3>
+        <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
+        <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord" data-en="Join Our Discord Server" data-tr="Discord Sunucumuza Katıl">Join Our Discord Server</a></p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </div>
-        <div class="footer-bottom">
-            <p id="copyright-text">&copy; 2025 LEONBOOST. All rights reserved.</p>
-            <p class="disclaimer-text">LEONBOOST is not affiliated with or endorsed by Riot Games Inc.</p>
+      </div>
+      <div class="footer-payments">
+        <h3 id="footer-payments-title" data-en="Payment Methods" data-tr="Ödeme Yöntemleri">Payment Methods</h3>
+        <div class="payment-icons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png" alt="Mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
         </div>
-    </footer>
-
-    <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
-
-    <script src="script.js"></script>
-
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Login</h3>
-            <form>
-                <div class="form-group">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-        </div>
+      </div>
     </div>
-
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Sign Up</h3>
-            <form>
-                <div class="form-group">
-                    <label for="signup-username">Username</label>
-                    <input type="text" id="signup-username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-email">Email</label>
-                    <input type="email" id="signup-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-password">Password</label>
-                    <input type="password" id="signup-password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
-        </div>
+    <div class="footer-bottom">
+      <p id="copyright-text" data-en="© 2025 LEONBOOST. All rights reserved." data-tr="© 2025 LEONBOOST. Tüm hakları saklıdır.">© 2025 LEONBOOST. All rights reserved.</p>
+      <p class="disclaimer-text" data-en="LEONBOOST is not affiliated with or endorsed by Riot Games Inc." data-tr="LEONBOOST, Riot Games Inc. ile bağlantılı veya onaylı değildir.">LEONBOOST is not affiliated with or endorsed by Riot Games Inc.</p>
     </div>
+  </footer>
 
+  <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Dil değiştirme scripti -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const langButtons = document.querySelectorAll(".lang-switcher img");
+      langButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const lang = this.getAttribute("data-lang");
+          document.querySelectorAll("[data-en]").forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+          });
+          langButtons.forEach(b => b.classList.remove("active-lang"));
+          this.classList.add("active-lang");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
