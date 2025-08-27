@@ -190,7 +190,7 @@
         </section>
     </main>
 
-        <footer class="main-footer">
+    <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-about">
                 <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
@@ -206,11 +206,11 @@
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
-                       <div class="footer-contact">
+            <div class="footer-contact">
                 <h3>Bize Ulaşın</h3>
                 <p><i class="fas fa-envelope"></i>leonboostofficial@gmail.com</p>
                 <p><i class="fab fa-discord"></i> <a href="https://discord.gg/SCQdtbWb" target="_blank">Discord Sunucumuz</a></p>
- <div class="social-icons">
+                <div class="social-icons">
                     <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet"
                         target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://x.com/leonboostoffcl" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -240,23 +240,22 @@
         </div>
     </footer>
 
+    <!-- Tek script bloğu -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const langButtons = document.querySelectorAll(".lang-switcher img");
-            langButtons.forEach(btn => {
-                btn.addEventListener("click", function () {
-                    const lang = this.getAttribute("data-lang");
-                    document.querySelectorAll("[data-en]").forEach(el => {
-                        el.textContent = el.getAttribute(`data-${lang}`);
-                    });
-                    langButtons.forEach(b => b.classList.remove("active-lang"));
-                    this.classList.add("active-lang");
+    document.addEventListener("DOMContentLoaded", function () {
+        // === Dil değiştirme ===
+        const langButtons = document.querySelectorAll(".lang-switcher img");
+        langButtons.forEach(btn => {
+            btn.addEventListener("click", function () {
+                const lang = this.getAttribute("data-lang");
+                document.querySelectorAll("[data-en]").forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
                 });
+                langButtons.forEach(b => b.classList.remove("active-lang"));
+                this.classList.add("active-lang");
             });
         });
-        <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Rank -> resim eşleştirmesi
+
         const rankImages = {
             iron1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
             iron2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
@@ -273,53 +272,39 @@
             gold2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
             gold3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
             gold4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
-            platinum1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
-            platinum2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
-            platinum3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
-            platinum4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
-            emerald1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
-            emerald2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
-            emerald3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
-            emerald4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
-            diamond1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
-            diamond2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
-            diamond3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
-            diamond4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
-            mastery: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/lol%20boost%20elo.png"
-        };
+             platinum1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
+    platinum2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
+    emerald1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
+    emerald2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
+    diamond1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
+    diamond2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
+    mastery: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/lol%20boost%20elo.png"
+  };
 
-        // Select elementlerini al
-        const currentRankSelect = document.getElementById("current-rank");
-        const desiredRankSelect = document.getElementById("desired-rank");
+  const currentRankSelect = document.getElementById("current-rank");
+  const desiredRankSelect = document.getElementById("desired-rank");
+  const currentImage = document.getElementById("current-league-image");
+  const targetImage = document.getElementById("target-league-image");
 
-        // Resim elementlerini al
-        const currentImage = document.getElementById("current-league-image");
-        const targetImage = document.getElementById("target-league-image");
+  function updateImage(selectElement, imageElement) {
+    const rank = selectElement.value;
+    if (rankImages[rank]) {
+      imageElement.src = rankImages[rank];
+    }
+  }
 
-        // Fonksiyon: seçilen rank’a göre resmi değiştir
-        function updateImage(selectElement, imageElement) {
-            const rank = selectElement.value;
-            if (rankImages[rank]) {
-                imageElement.src = rankImages[rank];
-            }
-        }
+  currentRankSelect.addEventListener("change", function () {
+    updateImage(currentRankSelect, currentImage);
+  });
+  desiredRankSelect.addEventListener("change", function () {
+    updateImage(desiredRankSelect, targetImage);
+  });
 
-        // Event listener ekle
-        currentRankSelect.addEventListener("change", function () {
-            updateImage(currentRankSelect, currentImage);
-        });
-
-        desiredRankSelect.addEventListener("change", function () {
-            updateImage(desiredRankSelect, targetImage);
-        });
-
-        // İlk açıldığında default resimleri ayarla
-        updateImage(currentRankSelect, currentImage);
-        updateImage(desiredRankSelect, targetImage);
-    });
+  // Sayfa açıldığında ilk resimleri yükle
+  updateImage(currentRankSelect, currentImage);
+  updateImage(desiredRankSelect, targetImage);
+});
 </script>
 
-    </script>
 </body>
 </html>
-
