@@ -14,14 +14,16 @@
 
 <body>
     <div class="global-background-lion-overlay">
-        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Arka Plan Aslan">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+            alt="LEONBOOST Arka Plan Aslan">
     </div>
 
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+                        alt="LEONBOOST Logo">
                 </a>
                 <div class="logo-text-group">
                     <span class="logo-name">LEONBOOST</span>
@@ -41,8 +43,10 @@
                 <a href="#" class="btn btn-login">Giriş Yap</a>
                 <a href="#" class="btn btn-signup">Kayıt Ol</a>
                 <div class="lang-switcher">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Türkçe" data-lang="tr" class="active-lang">
-                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png"
+                        alt="Türkçe" data-lang="tr" class="active-lang">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png"
+                        alt="English" data-lang="en">
                 </div>
             </div>
 
@@ -58,10 +62,13 @@
                 <h2>Elo Boost Hesaplayıcı</h2>
 
                 <div class="league-images-container">
-                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png
-" alt="Mevcut Lig" class="rank-icon">
+                    <img id="current-league-image"
+                        src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Mevcut Lig"
+                        class="rank-icon">
                     <i class="fas fa-arrow-right arrow-icon"></i>
-                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Hedef Lig" class="rank-icon">
+                    <img id="target-league-image"
+                        src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Hedef Lig"
+                        class="rank-icon">
                 </div>
 
                 <section class="lol-boost-configurator-section">
@@ -179,7 +186,7 @@
                                     </select>
                                 </div>
 
-                                </div>
+                            </div>
                             <div class="price-display">
                                 <p>Yaklaşık Fiyat: <span id="final-price">0.00 TL</span></p>
                             </div>
@@ -194,7 +201,8 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-about">
-                <img src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo" class="footer-logo">
+                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+                    alt="LEONBOOST Logo" class="footer-logo">
                 <p id="footer-about-text">LEONBOOST, LoL oyuncularına profesyonel ve güvenilir boost hizmetleri
                     sunar.
                     Hedefinizdeki lige bizimle ulaşın!</p>
@@ -214,8 +222,9 @@
                 <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Discord
                         Sunucumuz</a>
                 </p>
-               <div class="social-icons">
-                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </div>
@@ -280,20 +289,63 @@
             </form>
         </div>
     </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const langButtons = document.querySelectorAll(".lang-switcher img");
-      langButtons.forEach(btn => {
-        btn.addEventListener("click", function () {
-          const lang = this.getAttribute("data-lang");
-          document.querySelectorAll("[data-en]").forEach(el => {
-            el.textContent = el.getAttribute(`data-${lang}`);
-          });
-          langButtons.forEach(b => b.classList.remove("active-lang"));
-          this.classList.add("active-lang");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // === Dil değiştirme ===
+            const langButtons = document.querySelectorAll(".lang-switcher img");
+            langButtons.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const lang = this.getAttribute("data-lang");
+                    document.querySelectorAll("[data-en]").forEach(el => {
+                        el.textContent = el.getAttribute(`data-${lang}`);
+                    });
+                    langButtons.forEach(b => b.classList.remove("active-lang"));
+                    this.classList.add("active-lang");
+                });
+            });
+
+            // === Rank görselleri ===
+            const currentRankSelect = document.getElementById("current-rank");
+            const desiredRankSelect = document.getElementById("desired-rank");
+            const currentLeagueImage = document.getElementById("current-league-image");
+            const targetLeagueImage = document.getElementById("target-league-image");
+
+            const rankImages = {
+                iron1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
+                iron2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
+                iron3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
+                bronze1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronz%20(1).png",
+                bronze2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronz%20(1).png",
+                bronze3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronz%20(1).png",
+                bronze4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronz%20(1).png",
+                silver1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver%20(1).png",
+                silver2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver%20(1).png",
+                silver3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver%20(1).png",
+                silver4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver%20(1).png",
+                gold1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
+                gold2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
+                gold3: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
+                gold4: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
+                platinum1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
+                platinum2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
+                emerald1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
+                emerald2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
+                diamond1: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
+                diamond2: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
+                mastery: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/lol%20boost%20elo.png"
+            };
+
+            function updateImages() {
+                currentLeagueImage.src = rankImages[currentRankSelect.value];
+                targetLeagueImage.src = rankImages[desiredRankSelect.value];
+            }
+
+            currentRankSelect.addEventListener("change", updateImages);
+            desiredRankSelect.addEventListener("change", updateImages);
+
+            updateImages();
         });
-      });
-    });
-  </script>
+    </script>
 </body>
+
 </html>
