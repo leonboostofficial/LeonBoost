@@ -177,19 +177,49 @@
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const langButtons = document.querySelectorAll(".lang-switcher img");
-            langButtons.forEach(btn => {
-                btn.addEventListener("click", function () {
-                    const lang = this.getAttribute("data-lang");
-                    document.querySelectorAll("[data-en]").forEach(el => {
-                        el.textContent = el.getAttribute(`data-${lang}`);
-                    });
-                    langButtons.forEach(b => b.classList.remove("active-lang"));
-                    this.classList.add("active-lang");
+    document.addEventListener("DOMContentLoaded", function () {
+        // --- Dil Değiştirme ---
+        const langButtons = document.querySelectorAll(".lang-switcher img");
+        langButtons.forEach(btn => {
+            btn.addEventListener("click", function () {
+                const lang = this.getAttribute("data-lang");
+                document.querySelectorAll("[data-en]").forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
                 });
+                langButtons.forEach(b => b.classList.remove("active-lang"));
+                this.classList.add("active-lang");
             });
         });
-    </script>
+
+        // --- Rank Resimleri ---
+        const rankImages = {
+            iron: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron%20(2).png",
+            bronze: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronz%20(1).png",
+            silver: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver%20(1).png",
+            gold: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold%20(1).png",
+            platinum: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum%20(3).png",
+            emerald: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/emerald%20(1).png",
+            diamond: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond%20(1).png",
+            master: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/lol%20boost%20elo.png"
+        };
+
+        const currentRankSelect = document.getElementById("current-rank");
+        const currentLeagueImage = document.getElementById("current-league-image");
+
+        function updateImage() {
+            const selectedRank = currentRankSelect.value;
+            if (rankImages[selectedRank]) {
+                currentLeagueImage.src = rankImages[selectedRank];
+            }
+        }
+
+        // Sayfa açıldığında ilk resmi yükle
+        updateImage();
+
+        // Rank değişince resmi güncelle
+        currentRankSelect.addEventListener("change", updateImage);
+    });
+</script>
+
 </body>
 </html>
