@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEONBOOST - Calculate Elo Boost</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="global-background-lion-overlay">
+        <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Background Lion">
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png" alt="LEONBOOST Logo">
+                </a>
+                <div class="logo-text-group">
+                    <span class="logo-name">LEONBOOST</span>
+                    <span class="tagline" data-en="Take Your League to Victory!" data-tr="Ligini Zafere Taşı!">Take Your League to Victory!</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+                    <li><a href="valorant-boost.html" class="active" data-en="Valorant Boost" data-tr="Valorant Boost">Valorant Boost</a></li>
+                    <li><a href="hakkımızda.html" data-en="About Us" data-tr="Hakkımızda">About Us</a></li>
+                    <li><a href="iletişim.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-controls">
+                <a href="login.html" class="btn btn-login" id="btn-giris" data-en="Login" data-tr="Giriş Yap">Login</a>
+                <a href="signup.html" class="btn btn-signup" id="btn-kayitol" data-en="Sign Up" data-tr="Kayıt Ol">Sign Up</a>
+                <div class="lang-switcher">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png" alt="Turkish" data-lang="tr" class="active-lang">
+                    <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/en_flag%20(1).png" alt="English" data-lang="en">
+                </div>
+            </div>
+
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="elo-boost-calculator-section" style="padding-top: 100px;">
+            <div class="container">
+                <h2 data-en="Elo Boost Calculator" data-tr="Elo Boost Hesaplayıcı">Elo Boost Calculator</h2>
+
+                <div class="league-images-container">
+                    <img id="current-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Current League" class="rank-icon">
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                    <img id="target-league-image" src="https://raw.githubusercontent.com/khadija2807/LeonBoost/main/iron.png" alt="Target League" class="rank-icon">
+                </div>
+
+                <section class="lol-boost-configurator-section">
+                    <div class="container">
+                        <div class="boost-configurator">
+                            <h2 data-en="Configure Your Order" data-tr="Siparişini Yapılandır">Configure Your Order</h2>
+                            <div class="config-grid">
+                                <div class="config-item">
+                                    <label for="current-rank" data-en="Current League" data-tr="Mevcut Lig">Current League</label>
+                                    <select id="current-rank" name="current-rank">
+                                        <option value="iron1valo">Iron 1</option>
+                                        <option value="iron2valo">Iron 2</option>
+                                        <option value="iron3valo">Iron 3</option>
+                                        <option value="bronze1valo">Bronze 1</option>
+                                        <option value="bronze2valo">Bronze 2</option>
+                                        <option value="bronze3valo">Bronze 3</option>
+                                        <option value="silver1valo">Silver 1</option>
+                                        <option value="silver2valo">Silver 2</option>
+                                        <option value="silver3valo">Silver 3</option>
+                                        <option value="gold1valo">Gold 1</option>
+                                        <option value="gold2valo">Gold 2</option>
+                                        <option value="gold3valo">Gold 3</option>
+                                        <option value="platinum1valo">Platinum 1</option>
+                                        <option value="platinum2valo">Platinum 2</option>
+                                        <option value="platinum3valo">Platinum 3</option>
+                                        <option value="emerald1valo">Emerald 1</option>
+                                        <option value="emerald2valo">Emerald 2</option>
+                                        <option value="emerald3valo">Emerald 3</option>
+                                        <option value="diamond1valo">Diamond 1</option>
+                                        <option value="diamond2valo">Diamond 2</option>
+                                        <option value="diamond3valo">Diamond 3</option>
+                                        <option value="ascendant1valo">Ascendant 1</option>
+                                        <option value="ascendant2valo">Ascendant 2</option>
+                                        <option value="ascendant3valo">Ascendant 3</option>
+                                        <option value="immortal1valo">İmmortal 1</option>
+                                        <option value="immortal2valo">İmmortal 2</option>
+                                        <option value="immortal3valo">İmmortal 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="config-item">
+                                    <label for="desired-rank" data-en="Target League" data-tr="Hedef Lig">Target League</label>
+                                    <select id="desired-rank" name="desired-rank">
+                                                                                <option value="iron1valo">Iron 1</option>
+                                        <option value="iron2valo">Iron 2</option>
+                                        <option value="iron3valo">Iron 3</option>
+                                        <option value="bronze1valo">Bronze 1</option>
+                                        <option value="bronze2valo">Bronze 2</option>
+                                        <option value="bronze3valo">Bronze 3</option>
+                                        <option value="silver1valo">Silver 1</option>
+                                        <option value="silver2valo">Silver 2</option>
+                                        <option value="silver3valo">Silver 3</option>
+                                        <option value="gold1valo">Gold 1</option>
+                                        <option value="gold2valo">Gold 2</option>
+                                        <option value="gold3valo">Gold 3</option>
+                                        <option value="platinum1valo">Platinum 1</option>
+                                        <option value="platinum2valo">Platinum 2</option>
+                                        <option value="platinum3valo">Platinum 3</option>
+                                        <option value="emerald1valo">Emerald 1</option>
+                                        <option value="emerald2valo">Emerald 2</option>
+                                        <option value="emerald3valo">Emerald 3</option>
+                                        <option value="diamond1valo">Diamond 1</option>
+                                        <option value="diamond2valo">Diamond 2</option>
+                                        <option value="diamond3valo">Diamond 3</option>
+                                        <option value="ascendant1valo">Ascendant 1</option>
+                                        <option value="ascendant2valo">Ascendant 2</option>
+                                        <option value="ascendant3valo">Ascendant 3</option>
+                                        <option value="immortal1valo">İmmortal 1</option>
+                                        <option value="immortal2valo">İmmortal 2</option>
+                                        <option value="immortal3valo">İmmortal 3</option>
+                                    </select>
+                                </div>
+                        
+                                <div class="config-item">
+                                    <label for="current-lp" data-en="Current Points" data-tr="Mevcut LP">Current Points</label>
+                                    <select id="current-lp" name="current-lp">
+                                        <option value="0-19">0-19</option>
+                                        <option value="20-39">20-39</option>
+                                        <option value="40-59">40-59</option>
+                                        <option value="60-79">60-79</option>
+                                        <option value="80-100">80-100</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="price-display">
+                                <p data-en="Estimated Price:" data-tr="Tahmini Fiyat:">Estimated Price:</p>
+                                <span id="final-price">0.00 TL</span>
+                            </div>
+                            <button class="btn btn-primary order-btn" data-en="Place Order" data-tr="Sipariş Ver">Place Order</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
+                    alt="LEONBOOST Logo" class="footer-logo">
+                <p>LEONBOOST provides professional and reliable boosting services for League of Legends players. Reach your desired rank with us!</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Bize Ulaşın</h3>
+                <p><i class="fas fa-envelope"></i>leonboostofficial@gmail.com</p>
+                <p><i class="fab fa-discord"></i> <a href="https://discord.gg/SCQdtbWb" target="_blank">Discord Sunucumuz</a></p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/leonboostoffcl" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61579399974014" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-payments">
+                <h3 id="footer-payments-title">Payment Methods</h3>
+                <div class="payment-icons">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
+                        alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
+                        alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png"
+                        alt="PayPal">
+                    <img src="https://www.epay.com/adminapi/config/getImg?fileName=7f64c382-edc2-4cdc-91c4-3c42ab41ecf5"
+                        alt="E-Pay">
+                    <img src="https://logos-world.net/wp-content/uploads/2021/03/Stripe-Emblem.png" alt="Stripe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/640px-Google_Pay_Logo.svg.png"
+                        alt="Google Pay">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LEONBOOST. All rights reserved.</p>
+            <p class="disclaimer-text">Riot Games, Inc. is not endorsed by or affiliated with LEONBOOST in any way.</p>
+        </div>
+    </footer>
+
+    <!-- Tek script bloğu -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // === Dil değiştirme ===
+        const langButtons = document.querySelectorAll(".lang-switcher img");
+        langButtons.forEach(btn => {
+            btn.addEventListener("click", function () {
+                const lang = this.getAttribute("data-lang");
+                document.querySelectorAll("[data-en]").forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                });
+                langButtons.forEach(b => b.classList.remove("active-lang"));
+                this.classList.add("active-lang");
+            });
+        });
+
+        const rankImages = {
+iron1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron1.webp",
+                iron2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron2.webp",
+                iron3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron3.webp",
+                bronze1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronze1.webp",
+                bronze2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronze2.webp",
+                bronze3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronze3.webp",
+                silver1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver1.webp",
+                silver2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver2.webp",
+                silver3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver3.webp",
+                gold1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold1.webp",
+                gold2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold2.webp",
+                gold3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold3.webp",
+                platinum1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum1.webp",
+                platinum2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum2.webp",
+                platinum3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum3.webp",
+                diamond1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond1.webp",
+                diamond2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond2.webp",
+                diamond3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond3.webp",
+                ascendant1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ascendant1.webp",
+                ascendant2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ascendant2.webp",
+                ascendant3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ascendant3.webp",
+                immortal1valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/immortal1.webp",
+                immortal2valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/immortal2.webp",
+                immortal3valo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/immortal3%20(1).webp",
+  };
+
+  const currentRankSelect = document.getElementById("current-rank");
+  const desiredRankSelect = document.getElementById("desired-rank");
+  const currentImage = document.getElementById("current-league-image");
+  const targetImage = document.getElementById("target-league-image");
+
+  function updateImage(selectElement, imageElement) {
+    const rank = selectElement.value;
+    if (rankImages[rank]) {
+      imageElement.src = rankImages[rank];
+    }
+  }
+
+  currentRankSelect.addEventListener("change", function () {
+    updateImage(currentRankSelect, currentImage);
+  });
+  desiredRankSelect.addEventListener("change", function () {
+    updateImage(desiredRankSelect, targetImage);
+  });
+
+  // Sayfa açıldığında ilk resimleri yükle
+  updateImage(currentRankSelect, currentImage);
+  updateImage(desiredRankSelect, targetImage);
+});
+</script>
+
+</body>
+</html>
