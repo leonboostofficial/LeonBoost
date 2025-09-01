@@ -177,49 +177,54 @@
 
     <button class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // --- Dil Değiştirme ---
-        const langButtons = document.querySelectorAll(".lang-switcher img");
-        langButtons.forEach(btn => {
-            btn.addEventListener("click", function () {
-                const lang = this.getAttribute("data-lang");
-                document.querySelectorAll("[data-en]").forEach(el => {
-                    el.textContent = el.getAttribute(`data-${lang}`);
-                });
-                langButtons.forEach(b => b.classList.remove("active-lang"));
-                this.classList.add("active-lang");
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // --- Dil Değiştirme ---
+    const langButtons = document.querySelectorAll(".lang-switcher img");
+    langButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+            const lang = this.getAttribute("data-lang");
+            // Tüm normal metinleri değiştir
+            document.querySelectorAll("[data-en]").forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
             });
+            // Select içindeki option'ları da değiştir
+            document.querySelectorAll("select option").forEach(opt => {
+                if (opt.hasAttribute(`data-${lang}`)) {
+                    opt.textContent = opt.getAttribute(`data-${lang}`);
+                }
+            });
+            langButtons.forEach(b => b.classList.remove("active-lang"));
+            this.classList.add("active-lang");
         });
-
-        // --- Rank Resimleri ---
-        const rankImages = {
-            ironvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron3.webp",
-            bronzevalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronze3.webp",
-            silvervalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver3.webp",
-            goldvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold3.webp",
-            platinumvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum3.webp",
-            emeraldvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond3.webp",
-            ascendantvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ascendant3.webp",
-            ımmortalvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/immortal3%20(1).webp"
-        };
-
-        const currentRankSelect = document.getElementById("current-rank");
-        const currentLeagueImage = document.getElementById("current-league-image");
-
-        function updateImage() {
-            const selectedRank = currentRankSelect.value;
-            if (rankImages[selectedRank]) {
-                currentLeagueImage.src = rankImages[selectedRank];
-            }
-        }
-
-        // Sayfa açıldığında ilk resmi yükle
-        updateImage();
-
-        // Rank değişince resmi güncelle
-        currentRankSelect.addEventListener("change", updateImage);
     });
+
+    // --- Rank Resimleri ---
+    const rankImages = {
+        ironvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/iron3.webp",
+        bronzevalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/bronze3.webp",
+        silvervalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/silver3.webp",
+        goldvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/gold3.webp",
+        platinumvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/platinum3.webp",
+        emeraldvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond3.webp",
+        diamondvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/diamond3.webp",
+        ascendantvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/ascendant3.webp",
+        ımmortalvalo: "https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/immortal3%20(1).webp"
+    };
+
+    const currentRankSelect = document.getElementById("current-rank");
+    const currentLeagueImage = document.getElementById("current-league-image");
+
+    function updateImage() {
+        const selectedRank = currentRankSelect.value;
+        if (rankImages[selectedRank]) {
+            currentLeagueImage.src = rankImages[selectedRank];
+        }
+    }
+
+    updateImage(); // Sayfa açıldığında ilk resmi yükle
+    currentRankSelect.addEventListener("change", updateImage); // Rank değişince resmi güncelle
+});
 </script>
 
 </body>
