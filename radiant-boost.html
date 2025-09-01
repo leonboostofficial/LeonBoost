@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEONBOOST - Calculate Elo Boost</title>
+    <title>LEONBOOST - Radiant Boost Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
@@ -27,21 +27,21 @@
                 </a>
                 <div class="logo-text-group">
                     <span class="logo-name">LEONBOOST</span>
-                    <span class="tagline">Take Your League to Victory!</span>
+                    <span class="tagline" data-en="Take Your League to Victory!" data-tr="Ligini Zafere Taşı!">Take Your League to Victory!</span>
                 </div>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="valorant-boost.html" class="active">Valorant Boost</a></li>
-                    <li><a href="hakkımızda.html">About Us</a></li>
-                    <li><a href="iletişim.html">Contact</a></li>
+                    <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+                    <li><a href="valorant-boost.html" class="active" data-en="Valorant Boost" data-tr="Valorant Boost">Valorant Boost</a></li>
+                    <li><a href="hakkımızda.html" data-en="About Us" data-tr="Hakkımızda">About Us</a></li>
+                    <li><a href="iletişim.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="user-controls">
-                <a href="login.html" class="btn btn-login" id="btn-giris">Login</a>
-                <a href="signup.html" class="btn btn-signup" id="btn-kayitol">Sign Up</a>
+                <a href="login.html" class="btn btn-login" id="btn-giris" data-en="Login" data-tr="Giriş">Login</a>
+                <a href="signup.html" class="btn btn-signup" id="btn-kayitol" data-en="Sign Up" data-tr="Kayıt Ol">Sign Up</a>
                 <div class="lang-switcher">
                     <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/tr_flag%20(1).png"
                         alt="Turkish" data-lang="tr">
@@ -59,23 +59,25 @@
     <main>
         <section class="elo-boost-calculator-section" style="padding-top: 100px;">
             <div class="container">
-                <h2>Radiant Boost Calculator</h2>
+                <h2 data-en="Radiant Boost Calculator" data-tr="Radiant Boost Hesaplayıcı">Radiant Boost Calculator</h2>
                 <section class="lol-boost-configurator-section">
                     <div class="container">
                         <div class="boost-configurator">
-                            <h2>Configure Your Order</h2>
+                            <h2 data-en="Configure Your Order" data-tr="Siparişini Yapılandır">Configure Your Order</h2>
 
-               <p>Toplam Seviye: <span id="total-level">40</span></p>
+                            <p><span data-en="Total Level:" data-tr="Toplam Seviye:">Total Level:</span> <span id="total-level">40</span></p>
+                            
                             <div class="config-item">
-                                <label for="currentlp">Mevcut Puan</label>
+                                <label for="currentlp" data-en="Current Points" data-tr="Mevcut Puan">Current Points</label>
                                 <input type="number" min="0" value="0" id="currentlp">
                             </div>
 
                             <div class="config-item">
-                                <label for="targetlp">Hedef Puan</label>
+                                <label for="targetlp" data-en="Target Points" data-tr="Hedef Puan">Target Points</label>
                                 <input type="number" min="40" value="40" id="targetlp">
                             </div>
-                            <button class="btn btn-primary order-btn">Place Order</button>
+                            <p><strong data-en="Final Price:" data-tr="Toplam Fiyat:">Final Price:</strong> <span id="final-price">50.00 $</span></p>
+                            <button class="btn btn-primary order-btn" data-en="Place Order" data-tr="Sipariş Ver">Place Order</button>
                         </div>
                     </div>
                 </section>
@@ -88,43 +90,44 @@
             <div class="footer-about">
                 <img src="https://raw.githubusercontent.com/leonboostofficial/LeonBoost/main/leonboost_logo.png"
                     alt="LEONBOOST Logo" class="footer-logo">
-                <p id="footer-about-text">LEONBOOST provides professional and reliable boost services for LoL players.
-                    Reach your target league with us!</p>
+                <p id="footer-about-text" data-en="LEONBOOST provides professional and reliable boost services for Valorant players. Reach your target rank with us!"
+                   data-tr="LEONBOOST, Valorant oyuncuları için profesyonel ve güvenilir boost hizmetleri sunar. Hedef rütbene bizimle ulaş!">
+                   LEONBOOST provides professional and reliable boost services for Valorant players. Reach your target rank with us!</p>
             </div>
             <div class="footer-links">
-                <h3 id="footer-links-title">Quick Links</h3>
+                <h3 id="footer-links-title" data-en="Quick Links" data-tr="Hızlı Bağlantılar">Quick Links</h3>
                 <ul>
-                    <li><a href="#" id="footer-link-services">Services</a></li>
-                    <li><a href="#" id="footer-link-contact">Contact</a></li>
-                    <li><a href="#" id="footer-link-terms">Terms & Conditions</a></li>
-                    <li><a href="#" id="footer-link-privacy">Privacy Policy</a></li>
+                    <li><a href="#" id="footer-link-services" data-en="Services" data-tr="Hizmetler">Services</a></li>
+                    <li><a href="#" id="footer-link-contact" data-en="Contact" data-tr="İletişim">Contact</a></li>
+                    <li><a href="#" id="footer-link-terms" data-en="Terms & Conditions" data-tr="Şartlar ve Koşullar">Terms & Conditions</a></li>
+                    <li><a href="#" id="footer-link-privacy" data-en="Privacy Policy" data-tr="Gizlilik Politikası">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
-                <h3 id="footer-contact-title">Get in Touch</h3>
-                <p><i class="fas fa-envelope"></i> <span id="footer-email">infoleonboost.com</span></p>
-                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord">Our Discord Server</a>
-                </p>
+                <h3 id="footer-contact-title" data-en="Get in Touch" data-tr="İletişime Geç">Get in Touch</h3>
+                <p><i class="fas fa-envelope"></i> <span id="footer-email">info@leonboost.com</span></p>
+                <p><i class="fab fa-discord"></i> <a href="#" target="_blank" id="footer-discord" data-en="Our Discord Server" data-tr="Discord Sunucumuz">Our Discord Server</a></p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/leonboostofficial/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
             <div class="footer-payments">
-                <h3 id="footer-payments-title">Ödeme Yöntemleri</h3>
+                <h3 id="footer-payments-title" data-en="Payment Methods" data-tr="Ödeme Yöntemleri">Payment Methods</h3>
                 <div class="payment-icons">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
-                        alt="Mastercard">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
-                        alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p id="copyright-text">&copy; 2025 LEONBOOST. Tüm hakları saklıdır.</p>
-            <p class="disclaimer-text">LEONBOOST, Riot Games Inc. ile bağlantılı değildir veya onaylanmamıştır.
+            <p id="copyright-text" data-en="&copy; 2025 LEONBOOST. All rights reserved." data-tr="&copy; 2025 LEONBOOST. Tüm hakları saklıdır.">
+                &copy; 2025 LEONBOOST. All rights reserved.
+            </p>
+            <p class="disclaimer-text" data-en="LEONBOOST is not affiliated with or endorsed by Riot Games Inc."
+               data-tr="LEONBOOST, Riot Games Inc. ile bağlantılı değildir veya onaylanmamıştır.">
+               LEONBOOST is not affiliated with or endorsed by Riot Games Inc.
             </p>
         </div>
     </footer>
@@ -168,7 +171,20 @@
         targetInput.addEventListener("input", calculatePrice);
 
         updateTargetMax();
+
+        // Dil değiştirme scripti
+        const langButtons = document.querySelectorAll('.lang-switcher img');
+        const translatable = document.querySelectorAll('[data-en]');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                let lang = btn.getAttribute('data-lang');
+                document.querySelectorAll('.lang-switcher img').forEach(img => img.classList.remove('active-lang'));
+                btn.classList.add('active-lang');
+                translatable.forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                });
+            });
+        });
     </script>
 </body>
 </html>
-
