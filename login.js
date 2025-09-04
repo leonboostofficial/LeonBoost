@@ -9,7 +9,8 @@ document.getElementById('login-form').addEventListener('submit', async function(
         password: password
     };
 
-    const url = 'http://127.0.0.1:8000/accounts/api/token/'; // JWT token API ünvanı
+    // Django JWT token API-sinin ünvanı
+    const url = 'http://127.0.0.1:8000/accounts/api/token/'; 
 
     try {
         const response = await fetch(url, {
@@ -25,17 +26,20 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
         if (response.ok) {
             const accessToken = result.access;
-            // Tokeni brauzerin yerli saxlama yerinə (localStorage) saxlamaq
+            // Tokeni brauzerin localStorage-ına (yerli yaddaşına) yadda saxlamaq
             localStorage.setItem('access_token', accessToken);
             
             messageElement.textContent = "Giriş uğurlu oldu!";
             messageElement.style.color = 'green';
             
-            // İstifadəçini admin səhifəsinə yönləndirmək
-            window.location.href = 'admin.html'; // Təmsili səhifə
+            // Uğurlu girişdən sonra istifadəçini digər səhifəyə yönləndirmək
+            // Məsələn, dashboard.html səhifəsinə
+            window.location.href = 'dashboard.html'; 
             
         } else {
-            messageElement.textContent = 'Giriş uğursuz oldu. İstifadəçi adı və ya şifrə yanlışdır.';
+            // Səhvləri göstərmək üçün
+            const errorMessage = Object.values(result).flat().join(' ');
+            messageElement.textContent = errorMessage || 'Giriş uğursuz oldu. İstifadəçi adı və ya şifrə yanlışdır.';
             messageElement.style.color = 'red';
         }
     } catch (error) {
