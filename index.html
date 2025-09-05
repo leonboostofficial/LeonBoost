@@ -532,6 +532,132 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("selectedLang") || "en";
     changeLanguage(savedLang);
 });
+
+                 // Login Modal İşlevselliği
+    const loginModal = document.getElementById('loginModal');
+    const loginBtn = document.getElementById('btn-giris'); // Header'daki Login butonu
+    const loginCloseBtn = loginModal.querySelector('.close-btn');
+    const loginSubmitBtn = document.getElementById('login-submit-btn');
+
+    // Signup Modal İşlevselliği
+    const signupModal = document.getElementById('signupModal');
+    const signupBtn = document.getElementById('btn-kayitol'); // Header'daki Sign Up butonu
+    const signupCloseBtn = signupModal.querySelector('.close-btn');
+    const signupSubmitBtn = document.getElementById('signup-submit-btn');
+
+    // Login Butonuna Tıklandığında Modal'ı Aç
+    if (loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Linkin varsayılan davranışını engelle
+            loginModal.style.display = 'flex'; // Veya 'block'
+        });
+    }
+
+    // Login Modal Kapatma Butonu
+    if (loginCloseBtn) {
+        loginCloseBtn.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+        });
+    }
+
+    // Login Form Gönderimi
+    if (loginSubmitBtn) {
+        loginSubmitBtn.closest('form').addEventListener('submit', (e) => {
+            e.preventDefault(); // Formun sayfayı yenilemesini engelle
+            console.log('Login formu gönderildi!');
+            // Burada login işlemlerini yapabilirsiniz (API çağrısı vb.)
+            // loginModal.style.display = 'none'; // Başarılı giriş sonrası kapat
+        });
+    }
+
+    // Signup Butonuna Tıklandığında Modal'ı Aç
+    if (signupBtn) {
+        signupBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupModal.style.display = 'flex'; // Veya 'block'
+        });
+    }
+
+    // Signup Modal Kapatma Butonu
+    if (signupCloseBtn) {
+        signupCloseBtn.addEventListener('click', () => {
+            signupModal.style.display = 'none';
+        });
+    }
+
+    // Signup Form Gönderimi
+    if (signupSubmitBtn) {
+        signupSubmitBtn.closest('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Signup formu gönderildi!');
+            // Burada kayıt işlemlerini yapabilirsiniz
+            // signupModal.style.display = 'none'; // Başarılı kayıt sonrası kapat
+        });
+    }
+
+    // Modal dışına tıklandığında kapatma
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+        if (event.target === signupModal) {
+            signupModal.style.display = 'none';
+        }
+    });
+
+    // --- Hamburger Menü İşlevselliği ---
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (hamburgerMenu && mainNav) {
+        hamburgerMenu.addEventListener('click', () => {
+            mainNav.classList.toggle('active'); // 'active' sınıfını ekler/çıkarır
+        });
+    }
+
+    // --- FAQ Akordiyon İşlevselliği ---
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = question.querySelector('i'); // '+' ikonu
+
+        question.addEventListener('click', () => {
+            item.classList.toggle('active'); // Aktif durumu için stil tanımlayabilirsiniz
+
+            // Cevabı göster/gizle
+            if (item.classList.contains('active')) {
+                answer.style.display = 'block';
+                if (icon) icon.classList.replace('fa-plus', 'fa-minus'); // İkonu değiştir
+            } else {
+                answer.style.display = 'none';
+                if (icon) icon.classList.replace('fa-minus', 'fa-plus'); // İkonu geri değiştir
+            }
+        });
+
+        // Başlangıçta cevapları gizle (CSS ile de yapılabilir)
+        if (!item.classList.contains('active')) {
+             answer.style.display = 'none';
+        }
+    });
+
+    // --- Navigasyon Aktif Durum ---
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const currentPath = window.location.pathname.split('/').pop(); // Mevcut sayfanın dosya adını alır
+
+    navLinks.forEach(link => {
+        // Linkin href'i ile mevcut sayfa dosya adını karşılaştır
+        // Eğer link index.html ise ve mevcut sayfa index.html ise 'active' ekle
+        // Diğer sayfalar için de benzer bir kontrol yapılabilir.
+        if (link.getAttribute('href') === currentPath || (link.getAttribute('href') === 'index.html' && currentPath === '')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+    // Eğer linklerin `id`'leri (örn: id="nav-home") kullanılacaksa, o zaman bu ID'lere göre de kontrol yapılabilir.
+});
 </script>
 
 
